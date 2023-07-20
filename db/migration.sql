@@ -1,0 +1,1 @@
+-- the migration file defines the schema of our database
