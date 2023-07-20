@@ -1,0 +1,2 @@
+-- the seed file inserts data into our database after its schema has been defined
+-- (run after migration.sql)
