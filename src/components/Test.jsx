@@ -1,4 +1,4 @@
-const Test = ({/* props go here*/ }) => {
+const Test = () => {
     return (
         <div>This is a Test component</div>
     )
