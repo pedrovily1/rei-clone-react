@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Provider } from './context/Context.jsx'
-import Test from '../components/Test';
+import { Provider } from './context/Context'
+import Test from './components/Test';
+
 
 
 function App() {
