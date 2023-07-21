@@ -28,9 +28,9 @@ app.use(
 );
 
 // test endpoint (will be deleted after 7/24/2023)
-app.get("/table", async (REQ, RES) => {
+app.get("/test", async (REQ, RES) => {
     try {
-        const results = await pool.query("SELECT * FROM table ORDER BY id ASC;");
+        const results = await pool.query("SELECT * FROM testTable ORDER BY id ASC;");
         RES.json(results.rows); return;
     }
     catch (error) {
