@@ -30,7 +30,7 @@ app.use(
 // test endpoint (will be deleted after 7/24/2023)
 app.get("/test", async (REQ, RES) => {
     try {
-        const results = await pool.query("SELECT * FROM Color ORDER BY id ASC;");
+        const results = await pool.query("SELECT * FROM product ORDER BY id ASC;");
         RES.json(results.rows); return;
     }
     catch (error) {
@@ -39,10 +39,10 @@ app.get("/test", async (REQ, RES) => {
     }
 });
 
-// get all route (replace table names)
-app.get("/table", async (REQ, RES) => {
+// get all route
+app.get("/product", async (REQ, RES) => {
     try {
-        const results = await pool.query("SELECT * FROM [table_name] ORDER BY id ASC");
+        const results = await pool.query("SELECT * FROM product ORDER BY id ASC");
         RES.status(200).send(results.rows); return;
     }
     catch (error) {
@@ -51,11 +51,11 @@ app.get("/table", async (REQ, RES) => {
     }
 });
 
-// get one route (replace table names)
-app.get("/table/:id", async (REQ, RES) => {
+// get one route
+app.get("/product/:id", async (REQ, RES) => {
     const { id } = REQ.params;
     try {
-        const results = await pool.query("SELECT * FROM [table_name] WHERE id = $1", [id]);
+        const results = await pool.query("SELECT * FROM product WHERE id = $1", [id]);
         if (results.rowCount === 0) {
             RES.status(404).send("No resource found"); return;
         } else {
@@ -68,16 +68,16 @@ app.get("/table/:id", async (REQ, RES) => {
     }
 });
 
-// post one route (replace table names and query statement)
-app.get("/table", async (REQ, RES) => {
-    const {/* stuff destructed from request object */ } = REQ.body;
-    if (/* data validation fails */ !REQ.body) {
-        RES.status(400).send("Bad Request" /* tell user what to include in POST request */); return;
+// post one route
+app.get("/product", async (REQ, RES) => {
+    const { name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id } = REQ.body;
+    if (!name || !description || !price || !discount || !sale_end_date || !quantity || !review_id || !category_id || !color_id || !store_id) {
+        RES.status(400).send("Bad Request, include name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id"); return;
     }
     try {
         const results = await pool.query(
-            "INSERT INTO [table_name] (colums) VALUES (values) RETURNING *",
-            [/*stuff destructed from request object*/]
+            "INSERT INTO product (name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
+            [name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id]
         );
         if (results.rowCount === 0) {
             RES.status(500).send("Unable to POST"); return;
@@ -91,16 +91,17 @@ app.get("/table", async (REQ, RES) => {
     }
 });
 
-// put one route (replace table names and query statement)
-app.put("/table/:id", async (REQ, RES) => {
-    const {/* stuff destructed from request object */ } = REQ.body; const { id } = REQ.params;
-    if (/* data validation fails */ !REQ.body) {
-        RES.status(400).send("Bad Request" /* tell user what to include in POST request */); return;
+// put one route
+app.put("/product/:id", async (REQ, RES) => {
+    const { name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id } = REQ.body;
+    const { id } = REQ.params;
+    if (!name || !description || !price || !discount || !sale_end_date || !quantity || !review_id || !category_id || !color_id || !store_id) {
+        RES.status(400).send("Bad Request, include name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id"); return;
     }
     try {
         const results = await pool.query(
-            "UPDATE [table_name] SET [column] = $1, [column] = $2 WHERE id = $3 RETURNING *",
-            [/*stuff destructed from request object*/, id]
+            "UPDATE product SET name = $1, description = $2, price = $3, discount = $4, sale_end_date = $5, quantity = $6, review_id = $7, category_id = $8, color_id = $9, store_id = $10 WHERE id = $11 RETURNING *",
+            [name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id, id]
         );
         if (results.rowCount === 0) {
             RES.status(404).send("No resource found"); return;
@@ -114,16 +115,17 @@ app.put("/table/:id", async (REQ, RES) => {
     }
 });
 
-// patch one (replace table names and query statement)
-app.patch("/table/:id", async (REQ, RES) => {
-    const {/* stuff destructed from request object */ } = REQ.body; const { id } = REQ.params;
-    if (/* data validation fails */ !REQ.body) {
-        RES.status(400).send("Bad Request" /* tell user what to include in POST request */); return;
+// patch one
+app.patch("/product/:id", async (REQ, RES) => {
+    const { name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id } = REQ.body;
+    const { id } = REQ.params;
+    if (!name || !description || !price || !discount || !sale_end_date || !quantity || !review_id || !category_id || !color_id || !store_id) {
+        RES.status(400).send("Bad Request, include name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id"); return;
     }
     try {
         const results = await pool.query(
-            "UPDATE [table_name] SET [column] = $1, [column] = $2 WHERE id = $3 RETURNING *",
-            [/*stuff destructed from request object*/, id]
+            "UPDATE product SET name = $1, description = $2, price = $3, discount = $4, sale_end_date = $5, quantity = $6, review_id = $7, category_id = $8, color_id = $9, store_id = $10 WHERE id = $11 RETURNING *",
+            [name, description, price, discount, sale_end_date, quantity, review_id, category_id, color_id, store_id, id]
         );
         if (results.rowCount === 0) {
             RES.status(404).send("No resource found"); return;
@@ -138,11 +140,11 @@ app.patch("/table/:id", async (REQ, RES) => {
 });
 
 // delete one
-app.delete("/table/:id", async (REQ, RES) => {
+app.delete("/product/:id", async (REQ, RES) => {
     const { id } = REQ.params;
     try {
         const results = await pool.query(
-            "DELETE FROM [table_name] WHERE id = $1 RETURNING *",
+            "DELETE FROM product WHERE id = $1 RETURNING *",
             [id]
         );
         if (results.rowCount === 0) {
