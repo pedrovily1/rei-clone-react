@@ -1,24 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import "./Gnav.css";
 
 const GNav = () => {
   return (
-    <div className="gnav">
+    <div id="Gnav">
       <h3>
         This will be the GNav component between the UNav and the red banner
       </h3>
@@ -26,14 +10,5 @@ const GNav = () => {
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
 
 export default GNav;
