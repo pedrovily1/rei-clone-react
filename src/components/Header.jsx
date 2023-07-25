@@ -1,5 +1,5 @@
 import UNav from './UNav'
-import GNav from './Gnav'
+import GNav from './GNav'
 
 
 
