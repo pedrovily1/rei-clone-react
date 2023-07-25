@@ -1,5 +1,5 @@
-import UNav from './UNav';
-import GNav from './GNav';
+import UNav from './Unav';
+import GNav from './Gnav';
 import './Header.css';
 
 const Header = () => {
