@@ -1,0 +1,168 @@
+#Masthead{
+    margin-right: 344px;
+    margin-left: 100px;
+    padding-top: 10.5px;
+    padding-bottom: 11.5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+ }
+ #masthead-left{
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 48px;
+    height: 100%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+ }
+
+ #masthead-center {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #masthead-center input{
+    width: 100%; height: 100%; padding-top: 13.50px; padding-bottom: 13.50px; padding-left: 10px; padding-right: 90px; background: rgba(255, 255, 255, 0.85); box-shadow: 0px 0px 0px 1px #928B80 inset; border-radius: 4px; overflow: hidden; justify-content: flex-start; align-items: flex-start; display: inline-flex
+  }
+
+  #masthead-center button{
+    height: 46px;
+  padding: 0 10px;
+  background: #4E4D49;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  }
+
+#img {
+    width:  147px;
+    height: 82px;
+    fill: #292929;
+ }
+
+ #masthead-left h3{
+    
+    color: #292929;
+    font-size: 18px;
+    font-family: Stuart,Georgia,serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: .1px;
+    word-wrap: break-word;
+    text-decoration: none;
+    margin-left: -20px;
+    white-space: nowrap;
+    position: relative;
+    display: block;
+    margin-bottom: -7px;
+
+ }
+
+ #masthead-left a{
+    text-decoration: none;
+ }
+
+ #masthead-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+ #mastead-actions{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+ }
+
+
+ #second-div{
+    width: 90%;
+   
+ }
+
+ #second-div a{
+    text-decoration: none;
+}
+ #third-div{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+ #third-div a{
+     text-decoration: none;
+ }
+
+ #container {
+    width: 100%;
+    height: 100%;
+ }
+
+#icon {
+     margin-right: 4px;
+}
+
+#details {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-left: 4px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    
+}
+
+#text-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4.75px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#near-you, #open-time {
+    font-size: 13.5px;
+    font-family: Inter;
+}
+
+#open-time {
+    color: #367C3C;
+}
+ 
+#sunnyvale {
+    text-align: center;
+    color: #292929;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 18px;
+    word-wrap: break-word;
+}
+
+#sign-in{
+     color: #616161;
+     font-size: 14px;
+     font-family: Inter;
+     font-weight: 400;
+     line-height: 22px;
+     word-wrap: break-word;
+     text-decoration: none;
+}
+
+#cart{
+     color: #616161;
+     font-size: 14px;
+     font-family: Inter;
+     font-weight: 400;
+     line-height: 22px;
+     word-wrap: break-word
+} 

@@ -5,7 +5,7 @@ const UNav = () => {
    
     <div id='nav'>
       <div id='nav-list'>
-      <div class="nav-item">Shop REI</div>
+      <div className="nav-item">Shop REI</div>
       <div class="nav-item">REI Outlet</div>
       <div class="nav-item">Used Gear</div>
       <div class="nav-item">Classes & Events</div>
