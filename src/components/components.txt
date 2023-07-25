@@ -1,1 +1,0 @@
-The components folder contains components, the .jsx files that make up parts of the application

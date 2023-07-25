@@ -1,20 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import './Unav.css';
 
 const UNav = () => {
-    return <div className="gnav">
+    return <div id='Unav'>
     <h3>
         This will be the dark grey UNav component
     </h3>
