@@ -1,17 +1,11 @@
-import { useState } from 'react'
-import { Provider } from './context/Context'
-import Test from './components/Test';
-
-
+import { useState } from "react";
+import Header from "./components/header/Header";
 
 function App() {
-
-  const [state, setState] = useState("The beginning of something new");
-
   return (
     <div>
-      <Test/>
-     </div>
+      <Header />
+    </div>
   )
 }
 
