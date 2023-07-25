@@ -2,9 +2,10 @@ import "./PromoBar.css";
 
 const PromoBar = () => {
   return (
-    <section id="promoBanner">
-      <button id="previousBtn">
+    <section id="promo-message-banner">
+      <button className="previousBtn">
         <svg
+          id="previousBtnSVG"
           xmlns="http://www.w3.org/2000/svg"
           width="25"
           height="25"
@@ -17,16 +18,21 @@ const PromoBar = () => {
           />
         </svg>
       </button>
-      <div>
-        <a href="https://www.rei.com/membership/mastercard?trackingId=nav_promo-all">
-          <span>
-            Members {<strong>earn 5% in card rewards</strong>} on all co-op purchases with the REI
-            Co-op {<sup>®</sup>} MasterCard {<sup>®</sup>}. Apply now
+      <div className="carouselDiv">
+        <a
+          href="https://www.rei.com/membership/mastercard?trackingId=nav_promo-all"
+          className="AnnoyingTag"
+        >
+          <span className="promoSpan">
+            Members {<strong>earn 5% in card rewards</strong>} on all co-op
+            purchases with the REI Co-op {<sup>®</sup>} MasterCard{" "}
+            {<sup>®</sup>}. Apply now
           </span>
         </a>
       </div>
-      <button>
+      <button className="nextBtn">
         <svg
+          id="nextBtnSVG"
           xmlns="http://www.w3.org/2000/svg"
           width="25"
           height="25"
@@ -36,7 +42,8 @@ const PromoBar = () => {
           <path
             d="M16.6052 12.1955C16.6055 11.9327 16.502 11.6804 16.3172 11.4935L11.3122 6.48848C11.1236 6.30632 10.871 6.20552 10.6088 6.2078C10.3466 6.21008 10.0958 6.31525 9.9104 6.50066C9.72499 6.68607 9.61982 6.93688 9.61755 7.19907C9.61527 7.46127 9.71606 7.71387 9.89822 7.90248L14.1902 12.1955L9.89522 16.4905C9.70798 16.6784 9.60305 16.933 9.60352 17.1982C9.60399 17.4635 9.70981 17.7177 9.89772 17.905C10.0856 18.0922 10.3402 18.1971 10.6055 18.1967C10.8708 18.1962 11.125 18.0904 11.3122 17.9025L16.2922 12.9225C16.3913 12.8291 16.4701 12.7164 16.524 12.5914C16.5778 12.4663 16.6054 12.3316 16.6052 12.1955Z"
             fill="white"
-          />git 
+          />
+          git
         </svg>
       </button>
     </section>
