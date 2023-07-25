@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Provider } from './context/Context'
-import Test from './components/Test';
-import Header from './components/Header'
+import Header from './components/header/Header'
 
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
 
   return (
     <div>
-      <Test />
       <Header />
     </div>
   )
