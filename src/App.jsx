@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Provider } from './context/Context'
-import Header from './components/header/Header'
+import Test from './components/Test';
+
 
 
 function App() {
@@ -9,8 +10,8 @@ function App() {
 
   return (
     <div>
-      <Header />
-    </div>
+      <Test/>
+     </div>
   )
 }
 
