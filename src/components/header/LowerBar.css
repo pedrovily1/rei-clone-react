@@ -1,0 +1,20 @@
+#LowerBar {
+  display: flex;
+  width: 73.25em;
+  padding-right: 0px;
+  align-items: flex-start;
+
+}
+
+hr {
+  height: 1px;
+  background-color: lightgrey;
+  border: none;
+}
+
+div {
+  padding: 0.3rem 0.8rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
