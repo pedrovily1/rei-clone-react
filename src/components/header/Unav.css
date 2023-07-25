@@ -1,66 +1,71 @@
 * {
-    margin: 0;
-    padding: 0;
-    }
-
-
-    body {
-        font-family: 'Inter', sans-serif;
-       font-style: normal;
-       font-weight: 400;
-       letter-spacing: -.008rem;
-       font-size: 1.2rem;
-       line-height: 1.6rem;
-       }
-
-#Unav{
-       background-color: #292929;
-    overflow: hidden;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    
+   margin: 0;
+   padding: 0;
 }
-#nav{
-    background-color: #292929;
-    width: auto;
-    max-height: 40px;
-    margin-right: 30px;
-    margin-left: 150px;
-    padding-left: 30px;
-    padding-right: 30px;
-   }
-   @media (max-width: 1000px) {
-    #nav {
-      margin-left: 0px; 
-     }
-  }
-#nav-list {
-     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
- }
- @media (max-width: 1000px) {
-    #nav-list {
-      margin: 08px; 
-     }
-  }
- .nav-item {
-    color: #999999;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    word-wrap: break-word;
-    padding: 9px 10.42px;
-    text-align: center;
-     white-space: nowrap;  /* Add this line */
-   
-     }
 
-     .nav-item:hover {
-        color: #FAFAFA;
-        cursor: pointer;
-        }
-      
+
+body {
+   font-family: 'Inter', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   letter-spacing: -.008rem;
+   font-size: 1.2rem;
+   line-height: 1.6rem;
+}
+
+#Unav {
+   background-color: #292929;
+   overflow: hidden;
+   padding-right: 30px;
+   padding-left: 30px;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+#nav {
+   background-color: #292929;
+   width: auto;
+   max-height: 40px;
+   margin-right: 30px;
+   margin-left: 150px;
+   padding-left: 30px;
+   padding-right: 30px;
+}
+
+@media (max-width: 1000px) {
+   #nav {
+      margin-left: 0px;
+   }
+}
+
+#nav-list {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
+}
+
+@media (max-width: 1000px) {
+   #nav-list {
+      margin: 08px;
+   }
+}
+
+.nav-item {
+   color: #999999;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 20px;
+   word-wrap: break-word;
+   padding: 9px 10.42px;
+   text-align: center;
+   white-space: nowrap;
+   /* Add this line */
+
+}
+
+.nav-item:hover {
+   color: #FAFAFA;
+   cursor: pointer;
+}
