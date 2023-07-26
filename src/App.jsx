@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Header from "./components/header/Header";
+import { TotalProvider } from "./context/totalContext";
 
 function App() {
   return (
     <div>
-      <Header />
+      <TotalProvider>
+        <Header />
+      </TotalProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
