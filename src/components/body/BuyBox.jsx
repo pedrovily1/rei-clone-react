@@ -7,7 +7,7 @@ const BuyBox = () => {
       <div id="colorQuantity">
         <span>Color: </span>
         <span>Jet Black</span>
-        <image></image>
+        <img></img>
       </div>
     </div>
   );
