@@ -1,5 +1,5 @@
 import "./ProductHeader.css";
-import RatingId from './RatingId'
+import RatingId from "./RatingId";
 
 const ProductHeader = () => {
   return (

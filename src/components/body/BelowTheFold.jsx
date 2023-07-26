@@ -1,17 +1,7 @@
-import './BelowTheFold.css'
-
-
-
+import "./BelowTheFold.css";
 
 const BelowTheFold = () => {
-    return 
-}
+  return;
+};
 
-
-
-
-
-
-
-
-export default BelowTheFold
+export default BelowTheFold;
