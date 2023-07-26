@@ -13,12 +13,9 @@ const Masthead = () => {
       <div id="masthead-left">
         <a href="https://www.rei.com/">
           <img id="img" src="src\assets\oei_logo.png">
-            {/*The OEI logo*/}
           </img>
         </a>
-        <a href="https://www.rei.com/">
-          <h3>Shop</h3>
-        </a>
+        <a href="https://www.rei.com/">Shop</a>
       </div>
 
       <div id="masthead-center">
@@ -27,36 +24,37 @@ const Masthead = () => {
             type="text"
             placeholder="Search for great gear & clothing"
           ></input>
-          <img src={Search} alt="Logo" id="Search"></img>
+          <button><img src={Search} alt="Logo" id="Search"></img></button>
         </form>
       </div>
 
       <div id="masthead-right">
         <div id="mastead-actions">
+
           <div id="container">
-            <div id="details">
-              <img src={vector} alt="Logo" id="icon"></img>
-              <div id="text-container">
-                <p id="near-you">Near you</p>
-                <p id="open-time">Open til 9pm</p>
+            <img src={vector} alt="Logo" id="icon"></img>
+            <div id="text-container">
+              <div id="details">
+                <span id="near-you">Near you</span>
+                <span id="open-time">Open til 9pm</span>
               </div>
               <div id="location">
-                <p id="sunnyvale">Sunnyvale</p>
+                <span id="sunnyvale">Sunnyvale</span>
               </div>
+
             </div>
+
           </div>
 
           <div id="second-div">
-            <div>
-              <a href="https://www.rei.com/login">
-                <img src={Profile} alt="Logo" id="icon"></img>
-                <span id="sign-in">Sign In</span>
-              </a>
-            </div>
+            <a href="https://www.rei.com/login">
+              <img src={Profile} alt="Logo"></img>
+              <span id="sign-in">Sign In</span>
+            </a>
           </div>
           <div id="third-div">
             <a href="https://www.rei.com/ShoppingCart">
-              <img src={Cart} alt="Logo" id="icon"></img>
+              <img src={Cart} alt="Logo"></img>
               <div
                 id="cartQty"
                 style={
