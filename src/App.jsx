@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/header/Header";
-import { TotalProvider } from "./context/totalContext";
+import BodyContainer from "./components/body/BodyContainer";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <TotalProvider>
         <Header />
       </TotalProvider>
+      <BodyContainer />
     </div>
   );
 }
