@@ -145,3 +145,7 @@
    box-shadow: 0 4px 4px 0 rgba(12, 11, 8, .2);
    border-radius: 2px;
 }
+
+#sign-in {
+   padding-left: 5px;
+}
