@@ -1,0 +1,37 @@
+#topFullContainer {
+  display: flex;
+}
+
+.navComp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.productHeading {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-left: 4rem;
+  list-style-type: none;
+}
+
+.productDescText {
+  display: inline-flex;
+  flex: none;
+  padding: 0;
+}
+
+.slashDivider {
+  padding: 0 0.4rem;
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: grey;
+  font-style: normal;
+  font-weight: 400;
+}
