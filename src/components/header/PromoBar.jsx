@@ -26,7 +26,7 @@ const PromoBar = () => {
           <span className="promoSpan">
             Members {<strong>earn 5% in card rewards</strong>} on all co-op
             purchases with the REI Co-op {<sup>®</sup>} MasterCard{" "}
-            {<sup>®</sup>}. Apply now
+            {<sup>®</sup>}. {<u>Apply now</u>}
           </span>
         </a>
       </div>

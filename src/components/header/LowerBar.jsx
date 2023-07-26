@@ -1,27 +1,26 @@
 import './LowerBar.css';
 
 const LowerBar = () => {
-    return (
-      <>
-        <hr id="lowerBarhr"></hr>
-        <div className="LowerBar">
-          <div id="lowerBarBtns">Camp & Hike</div>
-          <div id="lowerBarBtns">Climb</div>
-          <div id="lowerBarBtns">Cycle</div>
-          <div id="lowerBarBtns">Water</div>
-          <div id="lowerBarBtns">Run</div>
-          <div id="lowerBarBtns">Fitness</div>
-          <div id="lowerBarBtns">Snow</div>
-          <div id="lowerBarBtns">Travel</div>
-          <div id="lowerBarBtns">Men</div>
-          <div id="lowerBarBtns">Women</div>
-          <div id="lowerBarBtns">Kids</div>
-                <div id="lowerBarBtns" style={{ color: 'red', borderColor: 'red'}}>Deals</div>
-          <div id="lowerBarBtns">Brands</div>
-          <div id="lowerBarBtns">More</div>
-        </div>
-      </>
-    );
+  return (
+    <>
+      <div className="LowerBar">
+        <div className="lowerBarBtns">Camp & Hike</div>
+        <div className="lowerBarBtns">Climb</div>
+        <div className="lowerBarBtns">Cycle</div>
+        <div className="lowerBarBtns">Water</div>
+        <div className="lowerBarBtns">Run</div>
+        <div className="lowerBarBtns">Fitness</div>
+        <div className="lowerBarBtns">Snow</div>
+        <div className="lowerBarBtns">Travel</div>
+        <div className="lowerBarBtns">Men</div>
+        <div className="lowerBarBtns">Women</div>
+        <div className="lowerBarBtns">Kids</div>
+        <div className="lowerBarBtns" id="deals">Deals</div>
+        <div className="lowerBarBtns">Brands</div>
+        <div className="lowerBarBtns">More</div>
+      </div>
+    </>
+  );
 }
 
 export default LowerBar;
