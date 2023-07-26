@@ -1,0 +1,15 @@
+#photoBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: fit-content;
+  height: fit-content;
+}
+
+.carousel,
+.carousel-root {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
