@@ -5,7 +5,9 @@ import BodyContainer from "./components/body/BodyContainer";
 function App() {
   return (
     <div>
-      <Header />
+      <TotalProvider>
+        <Header />
+      </TotalProvider>
       <BodyContainer />
     </div>
   );
