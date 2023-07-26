@@ -4,7 +4,7 @@ import MuttMoverCarousel from "./MuttMoverCarousel";
 
 const ImageContainer = () => {
   return (
-    <section>
+    <section id="imagecontainer">
       <CurrentImage />
       <MuttMoverCarousel />
     </section>
