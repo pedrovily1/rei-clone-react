@@ -8,11 +8,11 @@ import BelowTheFold from "./BelowTheFold";
 const BodyContainer = () => {
   return (
     <div id="bodyContainer">
-     {/* { <TopFullContent />} */}
-    {/* {<ImageContainer />
-    <ProductHeader />} */}
+      <TopFullContent />
+      <ImageContainer />
+      <ProductHeader />
       <BuyBox />
-     {/* { <BelowTheFold />} */}
+      <BelowTheFold />
     </div>
   );
 };
