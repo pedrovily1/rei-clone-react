@@ -9,15 +9,10 @@ const PurchaseForm = () => {
 
   const { shipCheck, setShipCheck } = useContext(ShippingContext)
 
+  
   const handleShipClick = (e) => {
-    e.preventDefault();
-
-    // shipCheck[0].classList.toggle('clickedShip')
-    // setShipCheck(e.currentTarget.id)
-    // e.currentTarget.classList.toggle('clickedShip')
-
-    
-    
+    e.preventDefault()
+    setShipCheck(e.currentTarget.id)
   };
 
   return (
@@ -49,11 +44,17 @@ const PurchaseForm = () => {
       <div id="shipBtnContainer">
         <div id="storeDiv">
           <button
-            className="shipToBtns"
+            className={shipCheck === 'storeShip' ? 'shipToBtns clickedShip' : 'shipToBtns'}
             onClick={handleShipClick}
             id="storeShip"
           >
             <span className="shipBtnTitle">Ship to Store</span>
+            <img src={greenCheck} id="greenCheck" style={
+              shipCheck === 'storeShip' 
+              ? {visibility: 'visible'}
+              : {visibility: 'hidden'}
+            }
+            ></img>
             <div className="shippingText">
               <span className="ready">Ready Fri, Aug 4</span>
               <span>at Sunnyvale</span>
@@ -64,11 +65,17 @@ const PurchaseForm = () => {
         </div>
         <div id="addressDiv">
           <button
-            className="shipToBtns"
+            className={shipCheck === 'addressShip' ? 'shipToBtns clickedShip' : 'shipToBtns'}
             onClick={handleShipClick}
             id="addressShip"
           >
             <span className="shipBtnTitle">Ship to address</span>
+            <img src={greenCheck} id="greenCheck" style={
+              shipCheck === 'addressShip' 
+              ? {visibility: 'visible'}
+              : {visibility: 'hidden'}
+            }
+            ></img>
             <div className="shippingText">
               <span className="ready">By Wed, Aug 2</span>
               <span>to 94103</span>
