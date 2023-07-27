@@ -2,5 +2,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #fff;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
