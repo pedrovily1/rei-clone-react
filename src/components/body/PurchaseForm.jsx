@@ -68,7 +68,7 @@ const PurchaseForm = () => {
           </span>
           <div className="checkboxContainer">
             <input type="checkbox" id="checkBox"></input>
-            <label for="checkBox" id="membershipLabel">
+            <label htmlFor="checkBox" id="membershipLabel">
               <span id="checkBoxText">
                 Add a{" "}
                 {<button id="lifetimeMembership">lifetime membership</button>}{" "}
