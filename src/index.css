@@ -1,6 +1,11 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+body {
+  font-family: Graphik, Helvetica Neue, sans-serif;
+  font-style: normal;
   font-weight: 400;
-  
+  letter-spacing: -.16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #0c0b08bf;
+  background-color: #fff;
 }
