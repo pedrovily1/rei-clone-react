@@ -1,15 +1,21 @@
-#photoBox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: fit-content;
-  height: fit-content;
+.mainPhoto {
+  object-fit: contain;
+  padding-top: 120px;
+  margin-left: 150px;
+  height: 50%;
 }
 
-.carousel,
-.carousel-root {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
+.carousel {
+  height: 600px;
+  width: auto;
+}
+
+.thumb {
+  padding-top: 0.5rem;
+  width: 4rem;
+  height: 6rem;
+}
+
+.thumb img {
+  object-fit: contain;
 }
