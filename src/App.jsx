@@ -11,12 +11,10 @@ function App() {
       <TotalProvider>
         <Header />
       </TotalProvider>
-      <BodyContainer />
-      <Footer />
-
       <ShippingProvider>
         <BodyContainer />
       </ShippingProvider>
+      <Footer />
     </div>
   );
 }
