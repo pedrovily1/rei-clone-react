@@ -4,6 +4,7 @@ import minus from "/src/assets/minus.svg";
 
 const PurchaseForm = () => {
   return (
+    // <div id="formHolder">
     <form className="form" id="purchaseForm">
       <span>$149.00</span>
 
@@ -53,22 +54,28 @@ const PurchaseForm = () => {
         </div>
       </div>
 
+      <div id="mushroomDiv">
+        <img
+          src="https://www.rei.com/assets/membership/pdp/membership-spot-illustration/live.svg"
+          id="mushrooms"
+        ></img>
+      </div>
+
       <div id="becomeMember">
-        <div id="mushroomDiv">
-          <img
-            src="https://www.rei.com/assets/membership/pdp/membership-spot-illustration/live.svg"
-            id="mushrooms"
-          ></img>
-        </div>
-        <div>
-          <span id="memberText">Members get an estimated $14.90 back on this item.</span>
-          <label id="membershipLabel">
-            <input type="checkbox"></input>
-            <span id="checkBoxText">
-              Add a {<button id="lifetimeMembership">lifetime membership</button>} for a{" "}
-              {<strong>one-time fee</strong>} of $30
-            </span>
-          </label>
+        <div id="memberDiv">
+          <span id="memberText">
+            Members get an estimated $14.90 back on this item.
+          </span>
+          <div className="checkboxContainer">
+            <input type="checkbox" id="checkBox"></input>
+            <label for="checkBox" id="membershipLabel">
+              <span id="checkBoxText">
+                Add a{" "}
+                {<button id="lifetimeMembership">lifetime membership</button>}{" "}
+                for a {<strong>one-time fee</strong>} of $30
+              </span>
+            </label>
+          </div>
         </div>
       </div>
 
@@ -81,6 +88,7 @@ const PurchaseForm = () => {
         <button>Check other stores</button>
       </div>
     </form>
+    // </div>
   );
 };
 
