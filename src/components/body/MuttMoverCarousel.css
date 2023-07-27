@@ -1,13 +1,33 @@
 .mainPhoto {
   object-fit: contain;
-  padding-top: 120px;
-  margin-left: 150px;
   height: 50%;
+}
+
+.control-dots, .carousel button, .carousel .carousel-status {
+  visibility: collapse;
 }
 
 .carousel {
   height: 600px;
   width: auto;
+}
+
+.carousel.carousel-slider {
+  position: relative;
+  padding: 10px;
+  height: 129%;
+  border: 1px solid #d8d8d8;
+}
+
+.carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 59%;
+  transition: height .15s ease-in;
+}
+
+.carousel * {
+  box-sizing: border-box;
 }
 
 .thumb {

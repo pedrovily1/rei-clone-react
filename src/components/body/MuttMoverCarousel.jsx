@@ -14,10 +14,10 @@ const MuttMoverCarousel = () => {
   return (
     <Carousel className="mainPhoto">
       <div>
-        <img src={DogImage} height="" width="400px" />
+        <img src={DogImage} />
       </div>
       <div>
-        <img src={frontBackpack} height="auto" width="auto" />
+        <img src={frontBackpack} />
       </div>
       <div>
         <img src={backpackback} />
