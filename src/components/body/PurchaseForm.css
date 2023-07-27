@@ -1,7 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
+#purchaseForm * {
+  box-sizing: border-box;
 }
+
 
 #purchaseForm {
   display: flex;
@@ -19,6 +19,8 @@
   display: flex;
   column-gap: 8px;
   height: 8rem;
+  position: relative;
+  top: 2rem;
 }
 
 .shipToBtns {
@@ -29,13 +31,38 @@
   padding-bottom: 16px;
   padding-right: 16px;
   background-color: rgb(254, 254, 254);
-  box-shadow: 0px 0px 0px 1px #2f2f2f inset;
-  border: #2c2c2b;
+  /* box-shadow: 0px 0px 0px 1px #2f2f2f inset; */
+  border: 1px solid #868686;
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  transition: box-shadow 0.3s ease;
 }
+
+.shipToBtns:hover{
+  box-shadow: 0 5px 3px 0 #d1d1d1;
+}
+
+
+
+.clickedShip {
+  box-shadow: inset 0 0 0 2px #5f5f5f
+  
+}
+
+.clickedShip:hover {
+  box-shadow: inset 0 0 0 2px #5f5f5f
+  , 0 5px 3px 0 #d1d1d1;
+}
+
+
+.free {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #4E4D49
+}
+
 
 .shipBtnTitle {
   color: #4e4d49;
@@ -49,6 +76,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  color: #666666;
 }
 
 .ready {
@@ -106,16 +134,7 @@
   height: 1rem;
 }
 
-/* #membershipLabel {
-  border-radius: 4px;
-  width: 100%;
-  height: 1.25rem;
-  display: flex;
-  padding: 0.5rem;
-  column-gap: .5rem;
-  position: relative;
-  left: 2.75rem;
-} */
+
 
 #membershipLabel:hover {
   cursor: pointer;
@@ -128,6 +147,12 @@
   color: #406eb5;
 }
 
+
+#savings {
+  color: #1f513f;
+  font-size: 17px;
+}
+
 #lifetimeMembership:hover {
   cursor: pointer;
   text-decoration: none;
@@ -135,7 +160,7 @@
 
 #checkBoxText {
   background: rgba(244, 242, 237, 0.15);
-  color: 333;
+  color: #666666;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -145,36 +170,71 @@
   align-items: center;
 }
 
+
+
+#oneTime {
+  color: #333;
+}
+
 .checkboxContainer {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
 .checkboxContainer label {
   display: flex;
   border-radius: 5px;
-  background-color: linen;
+  background-color: #fbfbfc;
+  padding: 1px;
+  width: 90%;
+  justify-content: center;
+  margin-right: 1px;
+  border: 2px solid #fbfbfc;
 }
 
-
-.checkboxContainer input[type='checkbox'] {
+.checkboxContainer input[type="checkbox"] {
   cursor: pointer;
   opacity: 0;
   position: absolute;
 }
 
-
-
 .checkboxContainer label::before {
-  content: '';
+  position: relative;
+  content: "";
   width: 1rem;
   height: 1rem;
   border: 1px solid rgb(131, 131, 131);
   border-radius: 5px;
+  right: 0.75rem;
+  top: 1px;
+  font-size: small;
 }
-
-
 
 .checkboxContainer label:hover {
-  background-color: linen;
+  background-color: #f5f5f5;
 }
+.checkboxContainer label:hover::before {
+  border-color: #333;
+  box-shadow: inset 0 0 0 1px #333;
+}
+
+
+.checkboxContainer input[type='checkbox']:checked + label::before {
+  background-color: #928b80;
+
+  content: '\002714';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid rgb(107, 107, 107)
+}
+
+
+.checkboxContainer input[type='checkbox']:focus + label {
+  border: 2px solid #333;
+}
+
