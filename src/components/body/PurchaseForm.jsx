@@ -2,11 +2,22 @@ import "./PurchaseForm.css";
 import plus from "../../assets/plus.svg";
 import minus from "/src/assets/minus.svg";
 import greenCheck from "../../assets/greenCheck.svg";
+import { useContext } from 'react'
+import ShippingContext from "../../context/shippingContext";
 
 const PurchaseForm = () => {
+
+  const { shipCheck, setShipCheck } = useContext(ShippingContext)
+
   const handleShipClick = (e) => {
     e.preventDefault();
-    e.currentTarget.classList.toggle("clickedShip");
+
+    // shipCheck[0].classList.toggle('clickedShip')
+    // setShipCheck(e.currentTarget.id)
+    // e.currentTarget.classList.toggle('clickedShip')
+
+    
+    
   };
 
   return (
