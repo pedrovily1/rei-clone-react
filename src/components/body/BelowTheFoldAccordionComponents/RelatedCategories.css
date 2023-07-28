@@ -1,5 +1,53 @@
-
 .relatedCatFlexBox {
+  margin-top: 2rem;
+  max-width: 1220px;
+  min-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px grey;
+}
+
+.theTitle {
   display: flex;
-  border: 2px solid purple;
+  justify-content: center;
+  margin-right: 58rem;
+  font-family: Stuart, Georgia, serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  position: relative;
+  top: 1rem;
+}
+
+.relatedBtnDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.relatedBtns {
+  height: 2.5rem;
+  min-width: fit-content;
+  padding: 0.5rem;
+  border-radius: 62.4375rem;
+  border: 1px solid #928b80;
+  background: #f9f8f6;
+  box-shadow: 0px 0px 0px 2px #928b80 inset;
+  margin: 0 0.9rem;
+}
+
+.relatedBtns:hover {
+  box-shadow: 0px 0px 0px 2px #000000 inset;
+}
+
+.aForRelatedBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: small;
 }
