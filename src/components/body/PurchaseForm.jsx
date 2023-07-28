@@ -14,17 +14,11 @@ const PurchaseForm = () => {
     e.preventDefault();
     setModal(true);
   };
-  const { setModal } = useContext(ModalContext);
 
   const handleShipClick = (e) => {
     e.preventDefault();
     setShipCheck(e.currentTarget.id);
   };
-
-  const showModal = (e) => {
-    e.preventDefault();
-    setModal(true);
-  }
 
   return (
     // <div id="formHolder">
