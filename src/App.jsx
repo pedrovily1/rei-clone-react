@@ -4,6 +4,7 @@ import BodyContainer from "./components/body/BodyContainer";
 import Footer from "./components/footer/Footer";
 import { TotalProvider } from "./context/totalContext";
 import { ShippingProvider } from "./context/shippingContext";
+import { ModalProvider } from "./context/modalContext";
 
 function App() {
   return (
@@ -11,9 +12,11 @@ function App() {
       <TotalProvider>
         <Header />
       </TotalProvider>
-      <ShippingProvider>
-        <BodyContainer />
-      </ShippingProvider>
+      <ModalProvider>
+        <ShippingProvider>
+          <BodyContainer />
+        </ShippingProvider>
+      </ModalProvider>
       <Footer />
     </div>
   );
