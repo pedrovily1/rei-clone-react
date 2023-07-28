@@ -5,19 +5,22 @@ import Footer from "./components/footer/Footer";
 import { TotalProvider } from "./context/totalContext";
 import { ShippingProvider } from "./context/shippingContext";
 import { ModalProvider } from "./context/modalContext";
+import CartModal from "./components/body/CartModal";
 
 function App() {
   return (
     <div>
-      <TotalProvider>
-        <Header />
-      </TotalProvider>
       <ModalProvider>
-        <ShippingProvider>
-          <BodyContainer />
-        </ShippingProvider>
+        <TotalProvider>
+          <ShippingProvider>
+            <CartModal />
+
+            <Header />
+            <BodyContainer />
+            <Footer />
+          </ShippingProvider>
+        </TotalProvider>
       </ModalProvider>
-      <Footer />
     </div>
   );
 }
