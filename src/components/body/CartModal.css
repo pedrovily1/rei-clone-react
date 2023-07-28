@@ -1,0 +1,20 @@
+.showModal {
+  visibility: visible;
+  z-index: 3;
+}
+
+.hideModal {
+  visibility: hidden;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* filter: blur(10px); */
+  background-color: rgba(255, 255, 255, 0.4);
+}

@@ -2,12 +2,13 @@ import "./PurchaseForm.css";
 import plus from "../../assets/plus.svg";
 import minus from "/src/assets/minus.svg";
 import greenCheck from "../../assets/greenCheck.svg";
-import { useContext } from 'react'
+import { useContext } from "react";
 import ShippingContext from "../../context/shippingContext";
+import ModalContext from "../../context/modalContext";
 
 const PurchaseForm = () => {
-
-  const { shipCheck, setShipCheck } = useContext(ShippingContext)
+  const { shipCheck, setShipCheck } = useContext(ShippingContext);
+  const { setModal } = useContext(ModalContext);
 
   const handleShipClick = (e) => {
     e.preventDefault();
@@ -15,9 +16,11 @@ const PurchaseForm = () => {
     // shipCheck[0].classList.toggle('clickedShip')
     // setShipCheck(e.currentTarget.id)
     // e.currentTarget.classList.toggle('clickedShip')
+  };
 
-    
-    
+  const showModal = (e) => {
+    e.preventDefault();
+    setModal(true);
   };
 
   return (
@@ -109,7 +112,9 @@ const PurchaseForm = () => {
 
       <span>{<strong>3</strong>} people have added to cart today</span>
 
-      <button id="addToCartBtn">Add to cart-$149.00</button>
+      <button id="addToCartBtn" onClick={showModal}>
+        Add to cart-$149.00
+      </button>
 
       <div id="inStock">
         <span>{<strong>Out of stock</strong>} at Sunnyvale</span>
