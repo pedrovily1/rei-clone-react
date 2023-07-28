@@ -26,6 +26,9 @@
 
 #color span {
   width: 100%;
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #585858;
 }
 
 #color button {
@@ -36,6 +39,29 @@
 
 #quantity {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #666666;
+  align-items: center;
+}
+
+#quantity span {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  width: 100%;
+}
+
+
+#quantity button {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+}
+
+#quantity input {
 
 }
 

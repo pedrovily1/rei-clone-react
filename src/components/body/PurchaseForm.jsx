@@ -8,6 +8,13 @@ import ModalContext from "../../context/modalContext";
 
 const PurchaseForm = () => {
   const { shipCheck, setShipCheck } = useContext(ShippingContext);
+  const { setModal } = useContext(ModalContext)
+
+
+  const showModal = (e) => {
+    e.preventDefault()
+    setModal(true)
+  }
 
   const handleShipClick = (e) => {
     e.preventDefault();
@@ -138,9 +145,9 @@ const PurchaseForm = () => {
       </span>
 
       <button id="addToCartBtn" onClick={showModal}>
-        Add to cart-$149.00
+        {<strong>Add to cart-$149.00</strong>}
       </button>
-      <button id="addToCartBtn">{<strong>Add to cart-$149.00</strong>}</button>
+     
 
       <div id="inStock">
         <span>{<strong>Out of stock</strong>} at Sunnyvale</span>
