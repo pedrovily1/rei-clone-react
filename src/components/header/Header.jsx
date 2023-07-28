@@ -1,15 +1,19 @@
-import UNav from './UNav';
-import GNav from './Gnav';
-import PromoBar from './PromoBar.jsx'
+import UNav from "./UNav";
+import GNav from "./Gnav";
+import PromoBar from "./PromoBar.jsx";
+import ModalContext from "../../context/modalContext";
+import { useContext } from "react";
 
 const Header = () => {
-    return (
-        <>
-            <UNav />
-            <GNav />
-            <PromoBar />
-        </>
-    )
-}
+  const { modal } = useContext(ModalContext);
 
-export default Header
+  return (
+    <div className={modal === true ? "blurred" : "notBlurred"}>
+      <UNav />
+      <GNav />
+      <PromoBar />
+    </div>
+  );
+};
+
+export default Header;
