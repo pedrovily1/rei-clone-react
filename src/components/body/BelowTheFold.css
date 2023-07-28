@@ -18,6 +18,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 #product-feature-desc {
   height: 85px;
   padding-top: 20px;
@@ -46,6 +47,7 @@
   line-height: 30px;
   word-wrap: break-word;
 }
+
 /* Liters  */
 
 .featured-specs__item {
@@ -118,12 +120,323 @@
 }
 
 /* STARTS FROM FEATURES --> QUESTIONS */
+
+/*------------------------------------------------------Questions css beggining------------------------------------------------------------------*/
+
+
+.outer-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+  font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.text-container  {
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-right: 4.64px;
+  left: 0px;
+  top: 4.83px;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
+
+}
+
+.text-container div {
+  color: #292929;
+  font-size: 15px;
+  font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+
+}
+
+.question-container {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: inline-flex;
+
+}
+
+.question-box {
+  width: 248px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  background: white;
+  border-radius: 4px;
+  border: 0.50px #7A7A7A solid;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
+
+}
+
+.question-box-content {
+  height: 39px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+
+
+.question-sort-container div {
+  height: 19px;
+  padding-top: 1px;
+  padding-left: 8px;
+  padding-right: 9.61px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  font-size: 16px;
+}
+
+.flex-container {
+  flex: 1 1 0;
+  height: 19px;
+  padding-left: 2px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.inner-flex-container {
+  flex: 1 1 0;
+  height: 19px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+
+.icon-container {
+  padding-bottom: 3px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.icon-container {
+  cursor: pointer;
+}
+
+.icon-box {
+  height: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.icon-box:hover {
+  cursor: pointer;
+}
+
+.questions-container {
+   /*this determines the space on the top between questions and other components*/
+  display: flex;
+  flex-direction: column;
+}
+
+#question {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+}
+
+.question-text {
+  color: #292929;
+  font-size: 18px;
+  font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  word-wrap: break-word;
+  padding-left: 10px;
+}
+
+.username {
+  padding-top: 10px;
+  width: 105.15px;
+  height: 18px;
+  top: 23px;
+  text-align: center;
+  color: #292929;
+  font-size: 16px;
+  font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 26px;
+  word-wrap: break-word;
+
+}
+
+.time-ago {
+  padding-top: 15px;
+  width: 91.51px;
+  height: 17px;
+  left: 5px;
+  top: 52px;
+  color: #292929;
+  font-size: 13px;
+  font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+  padding-left: 15px;
+
+}
+
+#answer-section {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.answer-section{
+       margin-right: 10px;
+      padding-bottom: 5px;
+}
+.answer-count {
+  padding-bottom: 1px;
+  padding-right: 17.59px;
+  color: #747474;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+}
+
+.answer-button {
+  padding-top: 7px;
+  padding-bottom: 9px;
+  padding-left: 36.70px;
+  padding-right: 36.30px;
+  border-radius: 2px;
+  border: 0.50px #B8B8B8 solid;
+  justify-content: center;
+  align-items: flex-start;
+  display: inline-flex;
+  text-align: center;
+  color: #292929;
+  font-size: 13px;
+
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  max-height: 20px;
+}
+
+.answer-button:hover {
+  cursor: pointer;
+}
+
+
+#answer-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  margin-left: 20px;
+
+}
+
+.answer-label {
+  color: #292929;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+
+}
+
+
+.answer-text,
+.timestamp {
+  color: #292929;
+  font-size: 14px;
+  font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+}
+
+.username2 {
+  font-weight: 700;
+  font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.end-of-page {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.innapropriate {
+  margin-left: 90px;
+  padding-top: 1px;
+}
+
+.interaction-section{
+  margin-bottom: -50px;
+}
+
+#Thumbsupout{
+  padding-left: 10px;
+  padding-right: 05px;
+
+}
+
+#Thumbsdownout{
+  padding-left: 10px;
+ 
+  padding-right: 05px;
+}
+
+.black-line {
+  margin-top: 80px;
+  border: none;
+  border-top: 1px solid rgb(196, 193, 193);
+  height: 1px;
+  width: 100%;
+}
+
+/*------------------------------------------------------Questions css end------------------------------------------------------------------*/
+
 .accordion-wrapper-div {
   display: flex;
   flex-direction: column;
   border: 2px solid blue;
   padding: 1rem;
 }
+
 .accordion-group {
   list-style-type: none;
 }
@@ -138,9 +451,9 @@
   border: 2px solid green;
 }
 
-.reviewFlexbox{
-    display: flex;
-    border: 2px solid fuchsia;
-    flex-wrap: wrap;
-    flex-direction: column;
+.reviewFlexbox {
+  display: flex;
+  border: 2px solid fuchsia;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
