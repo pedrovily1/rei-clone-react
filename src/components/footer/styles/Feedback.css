@@ -1,0 +1,14 @@
+#Feedback {
+    border-top: 1px solid #dcd6cb;
+    border-bottom: 1px solid #dcd6cb;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    max-width: 1136px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Feedback a {
+    color: #406eb5;
+    text-decoration: underline;
+}

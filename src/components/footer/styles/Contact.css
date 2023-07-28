@@ -1,0 +1,36 @@
+#Contact {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px 32px;
+    padding-top: 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #dcd6cb;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1168px;
+}
+
+#Contact p {
+    font-size: 16px;
+    letter-spacing: .08px;
+    line-height: 26px;
+    color: rgba(12, 11, 8, .75);
+    margin: unset;
+    padding-top: 4px;
+}
+
+#Contact a {
+    color: #406eb5;
+    line-height: 22px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#LinkBlock a:hover {
+    text-decoration: underline;
+}
+
+#LinkBlock br {
+    line-height: 30px;
+}

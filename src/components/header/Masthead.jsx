@@ -3,6 +3,7 @@ import vector from "/src/assets/Vector.svg";
 import Search from "/src/assets/Search.svg";
 import Profile from "/src/assets/Profile.svg";
 import Cart from "/src/assets/Cart.svg";
+import Logo from "/src/assets/oei_logo.png";
 import { useContext } from "react";
 import TotalContext from "../../context/totalContext";
 
@@ -12,7 +13,7 @@ const Masthead = () => {
     <div id="Masthead">
       <div id="masthead-left">
         <a href="https://www.rei.com/">
-          <img id="img" src="src\assets\oei_logo.png">
+          <img id="img" src={Logo}>
           </img>
         </a>
         <a href="https://www.rei.com/">Shop</a>

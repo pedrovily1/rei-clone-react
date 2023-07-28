@@ -1,5 +1,20 @@
-#bodyContainer{
+#bodyContainer {
     width: 100%;
-    display: flex;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#bodyContainer #display {
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+#bodyContainer #display-details {
+    letter-spacing: -.08px;
+    font-size: 13px;
+    line-height: 1.6rem;
+    padding-left: 50px;
 }

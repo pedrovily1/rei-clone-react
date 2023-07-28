@@ -1,15 +1,41 @@
-#photoBox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: fit-content;
-  height: fit-content;
+.mainPhoto {
+  object-fit: contain;
+  height: 50%;
 }
 
-.carousel,
-.carousel-root {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
+.control-dots, .carousel button, .carousel .carousel-status {
+  visibility: collapse;
+}
+
+.carousel {
+  height: 600px;
+  width: auto;
+}
+
+.carousel.carousel-slider {
+  position: relative;
+  padding: 10px;
+  height: 129%;
+  border: 1px solid #d8d8d8;
+}
+
+.carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 59%;
+  transition: height .15s ease-in;
+}
+
+.carousel * {
+  box-sizing: border-box;
+}
+
+.thumb {
+  padding-top: 0.5rem;
+  width: 4rem;
+  height: 6rem;
+}
+
+.thumb img {
+  object-fit: contain;
 }

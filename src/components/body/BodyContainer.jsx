@@ -9,9 +9,13 @@ const BodyContainer = () => {
   return (
     <div id="bodyContainer">
       <TopFullContent />
-      <ImageContainer />
-      <ProductHeader />
-      <BuyBox />
+      <div id="display">
+        <ImageContainer />
+        <div id="display-details">
+          <ProductHeader />
+          <BuyBox />
+        </div>
+      </div>
       <BelowTheFold />
     </div>
   );

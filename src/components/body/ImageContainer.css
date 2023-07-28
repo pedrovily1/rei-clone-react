@@ -1,4 +1,6 @@
 #imagecontainer {
   display: flex;
   justify-content: center;
+  max-width: 668px;
+  max-height: 930px;
 }
