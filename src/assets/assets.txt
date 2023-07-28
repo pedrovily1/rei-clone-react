@@ -1,1 +1,0 @@
-The assets folder contains images, .svg files, sound effects, or anything else that is required by the project.
