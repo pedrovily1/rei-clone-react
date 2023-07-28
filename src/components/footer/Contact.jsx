@@ -8,19 +8,19 @@ const Contact = () => {
         <div id='Contact'>
             <div>
                 <img src={help} alt='Help'></img>
-                <a>Help Center</a><br></br>
+                <a href='https://www.rei.com/help'>Help Center</a><br></br>
                 <p>Find answers online anytime.</p>
             </div>
 
             <div>
                 <img src={store} alt='Store'></img>
-                <a>Find a Store</a><br></br>
+                <a href='https://www.rei.com/stores/map'>Find a Store</a><br></br>
                 <p>See our stores and services.</p>
             </div>
 
             <div>
                 <img src={chat} alt='Chat'></img>
-                <a>Live Chat</a><br></br>
+                <a href='https://www.rei.com/help?chat=open'>Live Chat</a><br></br>
                 <p>Mon-Fri, 6am-8pm PT</p>
                 <p>Sat-Sun, 8am-5pm PT</p>
             </div>
