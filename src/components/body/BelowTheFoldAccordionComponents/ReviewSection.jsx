@@ -5,6 +5,11 @@ import Photo1 from "/src/assets/Photo1.jpg";
 import Photo2 from "/src/assets/Photo2.jpg";
 import Photo3 from "/src/assets/Photo3.jpg";
 import Thumbsup from "/src/assets/Thumbsup.svg";
+import DropDown from "/src/assets/dropdown.svg"
+import Starbold from '/src/assets/Starbold.svg';
+import Checkmark from '/src/assets/checkmark.svg';
+import Thumbsupoutline from '/src/assets/Thumbsupoutline.svg';
+import Thumbsdownoutline from '/src/assets/Thumbsdownoutline.svg';
 
 const ReviewSection = () => {
   return (
@@ -239,33 +244,78 @@ const ReviewSection = () => {
           </div>
         </div>
         {/* DIF SEC HERE */}
-        <div className="sortByFlexBox">
-          <div className="outer-container">
-            <div className="text-container">
-              <div>1 - 8 of 9 Reviews</div>
-            </div>
-            <div className="review-container">
-              <div className="review-box">
-                <div className="review-content">
-                  <div className="sort-container">
-                    <div>
-                      <div>Sort by </div> <div>Most Recent </div>
-                    </div>
+        <div className="Outer-Review-Text-Container">
+          <div className="Review-Text-Container">
+            <div className="Review-Box-Container">
+              <div className="Review-Box">
+                <div className="Review-Display">
+                  <div className="Reviews-Count">1 - 8 of 9 reviews</div>
+                   
+                  <div className="Sort-Container">
+                    <div className="Sort-By">Sort by Most Recent</div>
+                    <img className="Sort-Icon" src={DropDown} alt="DropDown" />
                   </div>
 
-                  <div className="icon-container">
-                    <div className="icon-box">
-                      <img src="/dropdown.svg" alt=""></img>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {/*Reviews component here*/ }
+
+        
+        <div className="main-container">
+        <div className="user-info">
+            <div className="user-details">
+                <div className="user-name">Nigel</div>
+                <div className="user-location">Michigan</div>
+                <div className="user-review">Review <span className="bold-letter">1</span></div>
+                <div className="user-votes">Votes <span className="bold-letter">0</span></div>
+            </div>
+        </div>
+        <div className="review-container">
+            <div className="review-header">
+                <div className="stars">
+                    <img src={Starbold} alt="" className="star" />
+                    <img src={Starbold} alt="" className="star" />
+                    <img src={Starbold} alt="" className="star" />
+                    <img src={Starbold} alt="" className="star" />
+                    <img src={Starbold} alt="" className="star" />
+                </div>
+                <div className="review-rating"></div>
+                <div className="review-title">It's a nice backpack if your dog is 12 lbs or less</div>
+                <div className="review-date">a month ago</div>
+            </div>
+            <div className="review-content">My sister has two Havanese dogs I take on bike rides. The girl weighs 10 lbs and loves riding in this backpack...[more text here]</div>
+            <div className="review-footer">
+                <div className="review-age"><span className="bold-letter">Age</span> 34-45</div>
+                <div className="review-recommendation">
+                    <img src={Checkmark} alt="" className="thumb" />
+                    Yes, I recommend this product.
+                </div>
+            </div>
+            <div className="review-images" style={{display: 'flex', justifyContent: 'space-between'}}>
+                <img src="https://via.placeholder.com/175x175" alt="Review Image 1"/>
+                <img src="https://via.placeholder.com/175x175" alt="Review Image 2" />
+            </div>
+            <div className="end-of-page">
+                <div className="helpful">
+                    Helpful?
+                    <img src={Thumbsupoutline} alt="" className="thumb" />
+                    (0)
+                    <img src={Thumbsdownoutline} alt="" className="thumb" />
+                    (0)
+                </div>
+                <div className="innapropriate">
+                    Report as inappropriate
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
       </li>
     </>
   );
