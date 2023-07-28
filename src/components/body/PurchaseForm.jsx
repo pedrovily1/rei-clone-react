@@ -4,9 +4,16 @@ import minus from "/src/assets/minus.svg";
 import greenCheck from "../../assets/greenCheck.svg";
 import { useContext } from "react";
 import ShippingContext from "../../context/shippingContext";
+import ModalContext from "../../context/modalContext";
 
 const PurchaseForm = () => {
   const { shipCheck, setShipCheck } = useContext(ShippingContext);
+  const { setModal } = useContext(ModalContext);
+
+  const showModal = (e) => {
+    e.preventDefault();
+    setModal(true);
+  };
 
   const handleShipClick = (e) => {
     e.preventDefault();
@@ -20,7 +27,7 @@ const PurchaseForm = () => {
 
       <div id="color">
         <span>Color: {<strong>Jet Black</strong>}</span>
-        
+
         <button>
           <img src="https://www.rei.com/media/color/186314?colorId=9513"></img>
         </button>
@@ -136,7 +143,9 @@ const PurchaseForm = () => {
         today
       </span>
 
-      <button id="addToCartBtn">{<strong>Add to cart-$149.00</strong>}</button>
+      <button id="addToCartBtn" onClick={showModal}>
+        Add to cart-$149.00
+      </button>
 
       <div id="inStock">
         <span>{<strong>Out of stock</strong>} at Sunnyvale</span>
