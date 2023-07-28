@@ -7,10 +7,10 @@ const BuyBox = () => {
       <PurchaseForm />
 
       <button id="wishListBtn">
-        Add to Wish List
+        {<strong>Add to Wish List</strong>}
       </button>
 
-      <button>OEI return policy</button>
+      <button id="returnPolicy">OEI return policy</button>
     </div>
   );
 };
