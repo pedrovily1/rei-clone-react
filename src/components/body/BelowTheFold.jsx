@@ -1,238 +1,44 @@
 import "./BelowTheFold.css";
-import Star from "/src/assets/Star.svg";
-import Starempty from "/src/assets/Starempty.svg";
-import Photo1 from "/src/assets/Photo1.jpg";
-import Photo2 from "/src/assets/Photo2.jpg";
-import Photo3 from "/src/assets/Photo3.jpg";
-import Thumbsup from "/src/assets/Thumbsup.svg";
+import FeatureAndTechSection from "./BelowTheFoldAccordionComponents/FeatureAndTechSection.jsx";
+import YouMayAlsoLike from "./BelowTheFoldAccordionComponents/YouMayAlsoLike";
+import ReviewSection from "./BelowTheFoldAccordionComponents/ReviewSection";
+import RelatedCategories from "./BelowTheFoldAccordionComponents/RelatedCategories";
 
 const BelowTheFold = () => {
   return (
     <>
       <div id="belowTheFold">
         {/* EVEN IF YOU PUP CONTAINER SECTION */}
-        <section id="product-feature-desc">
-          <p className="product-description__text">
-            Even if your pup isn't the hiking type, it can still get in on the
-            action with the Timbuk2 Muttmover Luxe pack, updated with a deeper
-            silhouette and all the amenities for adventurous small breeds.
-          </p>
-        </section>
-        <section id="product-feature-specs">
-          <div className="featured-specs__item">
-            <div className="featured-specs__name">Gear Capacity (L)</div>
-            <div className="featured-specs__values">34 liters</div>
-          </div>
-          <div className="featured-carryOn">
-            <div className="featured-carryOnHeader">Carry-On</div>
-            <div className="featured-carryOnYes">Yes</div>
-          </div>
-        </section>
+        <div className="evenIfPup">
+          <section id="product-feature-desc">
+            <p className="product-description__text">
+              Even if your pup isn't the hiking type, it can still get in on the
+              action with the Timbuk2 Muttmover Luxe pack, updated with a deeper
+              silhouette and all the amenities for adventurous small breeds.
+            </p>
+          </section>
+
+          <section id="product-feature-specs">
+            <div className="featured-specs__item">
+              <div className="featured-specs__name">Gear Capacity (L)</div>
+              <div className="featured-specs__values">34 liters</div>
+            </div>
+            <div className="featured-carryOn">
+              <div className="featured-carryOnHeader">Carry-On</div>
+              <div className="featured-carryOnYes">Yes</div>
+            </div>
+          </section>
+        </div>
         {/* FEATURES TO QUESTIONS SECTIONS */}
         <div className="accordion-wrapper-div">
           <ul className="accordion-group">
             {/* FEATURES AND TECH SECTIONS */}
             <div className="features-and-techFlexBox">
-              {/* FEATURES SECTION */}
-              <li className="features-accordion">
-                <div className="featuresDiv">
-                  <div id="featureHeader">
-                    <span> Features </span>
-                  </div>
-                  <div id="features-accordion__content-container">
-                    <section id="features-label">
-                      <ul id="product-features__list">
-                        <li>
-                          • Spacious main compartment securely and comfortably
-                          carries small pups up to 20 lbs.
-                        </li>
-                        <li>
-                          • Durable ripstop nylon lining is easy to wipe clean
-                          in case your dog has an accident
-                        </li>
-                        <li>
-                          • Multiple external pockets provide easy access to
-                          stored personal items, as well as your pet's leash and
-                          treats
-                        </li>
-                        <li>
-                          • Includes a collapsible, food-grade TPU water dish
-                          when it's time for your pup to hydrate
-                        </li>
-                        <li>
-                          • Adjustable and removable sternum and waist straps
-                          offer extra support for longer hauls
-                        </li>
-                        <li>
-                          • Padded air-mesh back panel and shoulder straps
-                          enhance comfort and breathability
-                        </li>
-                      </ul>
-                      <p className="product-features__origin">Imported.</p>
-                      <button>
-                        <span>
-                          {" "}
-                          Important <strong>WARNING</strong> for California
-                          residents
-                        </span>
-                      </button>
-                      <a>
-                        <span>View all Timbuk2 Dog Carriers</span>
-                      </a>
-                    </section>
-                  </div>
-                </div>
-              </li>
-              {/* TECH SPECS SECTION */}
-              <li className="tech-specs-accordion">
-                <div className="techDiv">
-                  <div id="technicalHeader">
-                    <span>Technical Specs</span>
-                  </div>
-                  <div className="specifications">
-                    <div className="specs">
-                      <div className="spec-item">
-                        <div className="spec-title">Best Use</div>
-                        <div className="spec-description">Hiking, Travel</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Bag Style</div>
-                        <div className="spec-description">Backpack</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Gear Capacity (L)</div>
-                        <div className="spec-description">34 liters</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">
-                          Gear Capacity (cu. in.)
-                        </div>
-                        <div className="spec-description">
-                          2,075 cubic inches
-                        </div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">
-                          Number of Exterior Pockets
-                        </div>
-                        <div className="spec-description">
-                          3 + main compartment
-                        </div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">
-                          iPad / Tablet Compartment
-                        </div>
-                        <div className="spec-description">Yes</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Carry-On</div>
-                        <div className="spec-description">Yes</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Number of Stays</div>
-                        <div className="spec-description">
-                          1 peripheral hoop
-                        </div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">
-                          Adjustable Torso Length
-                        </div>
-                        <div className="spec-description">Yes</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">
-                          Fits Torso Length (in.)
-                        </div>
-                        <div className="spec-description">18-20 inches</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Fits Waist/Hips</div>
-                        <div className="spec-description">26-46 inches</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Material(s)</div>
-                        <div className="spec-description">Ripstop nylon</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Dimensions</div>
-                        <div className="spec-description">
-                          18.7 x 12.6 x 9.8 inches
-                        </div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Weight</div>
-                        <div className="spec-description">3 lbs. 12 oz.</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Best Use</div>
-                        <div className="spec-description">Hiking, Travel</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Gender</div>
-                        <div className="spec-description">Unisex</div>
-                      </div>
-                      <div className="spec-item">
-                        <div className="spec-title">Hipbelt</div>
-                        <div className="spec-description">Yes</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
+              <FeatureAndTechSection />
             </div>
             {/* YOU MAY LIKE PICTURES SECTION */}
             <div className="mayLikeFlexBox">
-              <li className="youMayLikeTotalSection">
-                <div id="mayLikeMainDiv">
-                  <div id="mayLikeTopSection">
-                    <div id="topHeader">
-                      <h2>You may also like</h2>
-                    </div>
-                    <div id="carousel-component_dots">
-                      <ol>
-                        <li>
-                          <button></button>
-                        </li>
-                        <li>
-                          <button></button>
-                        </li>
-                        <li>
-                          <button></button>
-                        </li>
-                        <li>
-                          <button></button>
-                        </li>
-                        <li>
-                          <button></button>
-                        </li>
-                        <li>
-                          <button></button>
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                  <ul className="carousel-component__track">
-                    <li className="firstProduct">
-                      <div id="productImageContainer">
-                        <div id="ImageHolder">
-                          <img></img>
-                        </div>
-                      </div>
-                      <div id="firstProductDesc">
-                        <span>Nalgene</span>
-                        <span>Polyethylene Bottle - 2 fl. oz.</span>
-                      </div>
-                      <div id="firstProductRating"></div>
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-                  <div id="mayLikeBottomSection"></div>
-                </div>
-              </li>
+              <YouMayAlsoLike />
             </div>
             {/* PRODUCT REVIEWS SECTION */}
             <li id="product-reviews-accordion">
@@ -414,7 +220,9 @@ const BelowTheFold = () => {
                     <img src={Starempty} alt="" className="star"></img>
                     <img src={Starempty} alt="" className="star"></img>
                   </div>
-                  <div className="title">Way smaller than described, returning</div>
+                  <div className="title">
+                    Way smaller than described, returning
+                  </div>
                   <div className="reviewer-info">
                     <div className="name">Hiking20</div>
                     <div className="time">2 years ago</div>
@@ -516,17 +324,7 @@ const BelowTheFold = () => {
       </div>
       {/* Related Categories */}
       <div className="relatedCatFlexBox">
-        <nav>
-          <h2>Related Categories</h2>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </nav>
+        <RelatedCategories />
       </div>
     </>
   );
