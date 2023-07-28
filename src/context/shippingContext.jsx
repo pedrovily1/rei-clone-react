@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const ShippingContext = createContext();
 
 export const ShippingProvider = ({ children }) => {
-  const [shipCheck, setShipCheck] = useState([]);
+  const [shipCheck, setShipCheck] = useState(null);
 
   // functionality and functions can go here
 
