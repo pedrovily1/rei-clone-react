@@ -167,46 +167,46 @@ const ReviewSection = () => {
             </div>
           </div>
           <div className="review-card">
-            <div class="header">Most Helpful Critical Review</div>
-            <div class="main-section">
-              <div class="star-section">
-                <img src={Star} alt="" class="star"></img>
-                <img src={Starempty} alt="" class="star"></img>
-                <img src={Starempty} alt="" class="star"></img>
-                <img src={Starempty} alt="" class="star"></img>
-                <img src={Starempty} alt="" class="star"></img>
+            <div className="header">Most Helpful Critical Review</div>
+            <div className="main-section">
+              <div className="star-section">
+                <img src={Star} alt="" className="star"></img>
+                <img src={Starempty} alt="" className="star"></img>
+                <img src={Starempty} alt="" className="star"></img>
+                <img src={Starempty} alt="" className="star"></img>
+                <img src={Starempty} alt="" className="star"></img>
               </div>
-              <div class="title">Way smaller than described, returning</div>
-              <div class="reviewer-info">
-                <div class="name">Hiking20</div>
-                <div class="time">2 years ago</div>
+              <div className="title">Way smaller than described, returning</div>
+              <div className="reviewer-info">
+                <div className="name">Hiking20</div>
+                <div className="time">2 years ago</div>
               </div>
 
-              <div class="review">
+              <div className="review">
                 We bought this to carry our mini-schnauzer, who loves hiking.
                 She
               </div>
-              <div class="review-show">Show full review</div>
+              <div className="review-show">Show full review</div>
             </div>
-            <div class="footer">
-              <div class="helpful">
+            <div className="footer">
+              <div className="helpful">
                 <img src={Thumbsup} alt=""></img>
                 65 people found this helpful
               </div>
 
-              <div class="show-reviews">
+              <div className="show-reviews">
                 Show Reviews:
-                <div class="ratings">
-                  <div class="rating">
-                    <p class="text">3 </p>
+                <div className="ratings">
+                  <div className="rating">
+                    <p className="text">3 </p>
                     <img src={Star} alt=""></img>
                   </div>
-                  <div class="rating">
-                    <p class="text">2</p>
+                  <div className="rating">
+                    <p className="text">2</p>
                     <img src={Star} alt=""></img>
                   </div>
-                  <div class="rating">
-                    <p class="text">and 1</p>
+                  <div className="rating">
+                    <p className="text">and 1</p>
                     <img src={Star} alt=""></img>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ const ReviewSection = () => {
             </div>
           </div>
         </div>
-        <div id="image-row">
+       {/* { <div id="image-row">
           <div className="image-container">
             <div className="gradient-box">
               <img
@@ -242,7 +242,7 @@ const ReviewSection = () => {
               ></img>
             </div>
           </div>
-        </div>
+        </div>} */}
         {/* DIF SEC HERE */}
         <div className="Outer-Review-Text-Container">
           <div className="Review-Text-Container">

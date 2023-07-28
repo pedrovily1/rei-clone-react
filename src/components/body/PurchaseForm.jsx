@@ -5,10 +5,17 @@ import greenCheck from "../../assets/greenCheck.svg";
 import { useContext } from "react";
 import ShippingContext from "../../context/shippingContext";
 import ModalContext from "../../context/modalContext";
+import { useState } from "react";
 
 const PurchaseForm = () => {
   const { shipCheck, setShipCheck } = useContext(ShippingContext);
   const { setModal } = useContext(ModalContext);
+
+  const [number, setNumber] = useState(1)
+  
+
+ 
+  const [value, setValue] = useState('')
 
   
 
@@ -21,6 +28,27 @@ const PurchaseForm = () => {
     e.preventDefault();
     setModal(true);
   };
+
+
+
+
+  const handleQty = (e) => {
+    e.preventDefault()
+    if (e.currentTarget.id === 'minusBtn') {
+      setNumber(number - 1)
+    } else {
+      setNumber(number + 1)
+    }
+  }
+
+
+
+  const changeNum = (e) => {
+    setValue(e.currentTarget.value)
+    console.log(value)
+  }
+
+
 
   return (
     // <div id="formHolder">
@@ -38,11 +66,11 @@ const PurchaseForm = () => {
       <div id="quantity">
         <span>Quantity</span>
         <div>
-          <button id="minusBtn">
+          <button id="minusBtn" onClick={handleQty}>
             <img src={minus}></img>
           </button>
-          <input type="number"></input>
-          <button id="plusBtn">
+          <input type="number" onChange={changeNum}></input>
+          <button id="plusBtn" onClick={handleQty}>
             <img src={plus}></img>
           </button>
         </div>
@@ -146,7 +174,7 @@ const PurchaseForm = () => {
       </span>
 
       <button id="addToCartBtn" onClick={showModal}>
-        Add to cart-$149.00
+        {<strong>Add to cart-$149.00</strong>}
       </button>
 
       <div id="inStock">
