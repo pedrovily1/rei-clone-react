@@ -2,32 +2,25 @@ import "./PurchaseForm.css";
 import plus from "../../assets/plus.svg";
 import minus from "/src/assets/minus.svg";
 import greenCheck from "../../assets/greenCheck.svg";
-import { useContext } from 'react'
+import { useContext } from "react";
 import ShippingContext from "../../context/shippingContext";
 
 const PurchaseForm = () => {
-
-  const { shipCheck, setShipCheck } = useContext(ShippingContext)
+  const { shipCheck, setShipCheck } = useContext(ShippingContext);
 
   const handleShipClick = (e) => {
     e.preventDefault();
-
-    // shipCheck[0].classList.toggle('clickedShip')
-    // setShipCheck(e.currentTarget.id)
-    // e.currentTarget.classList.toggle('clickedShip')
-
-    
-    
+    setShipCheck(e.currentTarget.id);
   };
 
   return (
     // <div id="formHolder">
     <form className="form" id="purchaseForm">
-      <span>$149.00</span>
+      <span id="price">$149.00</span>
 
       <div id="color">
-        <span>Color: </span>
-        <span>Jet Black</span>
+        <span>Color: {<strong>Jet Black</strong>}</span>
+        
         <button>
           <img src="https://www.rei.com/media/color/186314?colorId=9513"></img>
         </button>
@@ -49,14 +42,30 @@ const PurchaseForm = () => {
       <div id="shipBtnContainer">
         <div id="storeDiv">
           <button
-            className="shipToBtns"
+            className={
+              shipCheck === "storeShip"
+                ? "shipToBtns clickedShip"
+                : "shipToBtns"
+            }
             onClick={handleShipClick}
             id="storeShip"
           >
-            <span className="shipBtnTitle">Ship to Store</span>
+            <div className="flexDiv">
+              <span className="shipBtnTitle">Ship to Store</span>
+              <img
+                src={greenCheck}
+                id="greenCheck"
+                style={
+                  shipCheck === "storeShip"
+                    ? { visibility: "visible" }
+                    : { visibility: "hidden" }
+                }
+              ></img>
+            </div>
+
             <div className="shippingText">
               <span className="ready">Ready Fri, Aug 4</span>
-              <span>at Sunnyvale</span>
+              <span className="ready">at Sunnyvale</span>
             </div>
             <span>{<strong className="free">FREE</strong>}</span>
           </button>
@@ -64,14 +73,29 @@ const PurchaseForm = () => {
         </div>
         <div id="addressDiv">
           <button
-            className="shipToBtns"
+            className={
+              shipCheck === "addressShip"
+                ? "shipToBtns clickedShip"
+                : "shipToBtns"
+            }
             onClick={handleShipClick}
             id="addressShip"
           >
-            <span className="shipBtnTitle">Ship to address</span>
+            <div className="flexDiv">
+              <span className="shipBtnTitle">Ship to Store</span>
+              <img
+                src={greenCheck}
+                id="greenCheck"
+                style={
+                  shipCheck === "addressShip"
+                    ? { visibility: "visible" }
+                    : { visibility: "hidden" }
+                }
+              ></img>
+            </div>
             <div className="shippingText">
               <span className="ready">By Wed, Aug 2</span>
-              <span>to 94103</span>
+              <span className="ready">to 94103</span>
             </div>
             <span className="ready">
               {<strong className="free">FREE</strong>}
@@ -107,9 +131,12 @@ const PurchaseForm = () => {
         </div>
       </div>
 
-      <span>{<strong>3</strong>} people have added to cart today</span>
+      <span id="viewedToday">
+        {<strong className="strongNumbers">3</strong>} people have added to cart
+        today
+      </span>
 
-      <button id="addToCartBtn">Add to cart-$149.00</button>
+      <button id="addToCartBtn">{<strong>Add to cart-$149.00</strong>}</button>
 
       <div id="inStock">
         <span>{<strong>Out of stock</strong>} at Sunnyvale</span>
