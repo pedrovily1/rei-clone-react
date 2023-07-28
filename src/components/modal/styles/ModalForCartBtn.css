@@ -1,0 +1,47 @@
+#ModalForCartBtn {
+    max-width: 640px;
+    border-radius: 0.4rem;
+    box-shadow: 0 1.6rem 1.6rem #0c0b0833;
+    min-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    padding: 24px;
+}
+
+#ModalForCartBtn h1 {
+    font-family: Stuart, Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0px;
+    font-size: 24px;
+    line-height: 3rem;
+}
+
+#product-overview {
+    display: flex;
+}
+
+#product-image {
+    height: 160px;
+    margin-right: 33px;
+}
+
+#product-overview span {
+    color: #0c0b0899;
+    font-family: Graphik, Helvetica Neue, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.016rem;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+#product-text {
+    display: flex;
+    flex-direction: column;
+}
