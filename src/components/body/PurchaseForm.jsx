@@ -10,6 +10,12 @@ const PurchaseForm = () => {
   const { shipCheck, setShipCheck } = useContext(ShippingContext);
   const { setModal } = useContext(ModalContext);
 
+  const showModal = (e) => {
+    e.preventDefault();
+    setModal(true);
+  };
+  const { setModal } = useContext(ModalContext);
+
   const handleShipClick = (e) => {
     e.preventDefault();
     setShipCheck(e.currentTarget.id);
