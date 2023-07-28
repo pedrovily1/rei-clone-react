@@ -9,16 +9,18 @@ import CartModal from "./CartModal";
 const BodyContainer = () => {
   return (
     <div id="bodyContainer">
-      <CartModal />
-      <TopFullContent />
-      <div id="display">
-        <ImageContainer />
-        <div id="display-details">
-          <ProductHeader />
-          <BuyBox />
+      <div id="bcDiv">
+        <CartModal />
+        <TopFullContent />
+        <div id="display">
+          <ImageContainer />
+          <div id="display-details">
+            <ProductHeader />
+            <BuyBox />
+          </div>
         </div>
+        <BelowTheFold />
       </div>
-      <BelowTheFold />
     </div>
   );
 };
