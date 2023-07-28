@@ -1,12 +1,25 @@
 #topFullContainer {
   display: flex;
+  height: 18px;
+  width: 100%;
+  position: relative;
+  bottom: 1rem;
+  right: 3.75rem;
+  font-size: large;
 }
 
 .navComp {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 0.8rem 0;
+}
+
+.navComp a,
+.navComp span {
+  font-size: 14px;
+}
+
+.navComp li {
+  align-items: center;
 }
 
 .productHeading {
@@ -18,7 +31,6 @@
 }
 
 .productDescText {
-  display: inline-flex;
   flex: none;
   padding: 0;
 }
@@ -28,10 +40,16 @@
   color: grey;
 }
 
-a {
+#topFullContainer a {
   text-decoration: none;
   cursor: pointer;
   color: grey;
   font-style: normal;
   font-weight: 400;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#topFullContainer a:hover {
+  color: #406eb5;
+  text-decoration: underline;
 }

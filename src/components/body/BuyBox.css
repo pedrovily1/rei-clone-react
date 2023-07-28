@@ -5,47 +5,44 @@
   flex-wrap: wrap;
 }
 
-
+#returnDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
 #wishListBtn {
   border: 1px solid #77726a;
   width: 100%;
   height: 38px;
   border-radius: 4px;
-  background-color: #F9F8F6;
+  background-color: #f9f8f6;
   font-size: 17px;
-  transition: box-shadow .5s ease;
+  transition: box-shadow 0.5s ease;
+  position: relative;
+  top: 1rem;
 }
-
-
 
 #wishListBtn:hover {
   box-shadow: inset 0 0 0 2px #414141;
 }
 
-
 #wishListBtn strong {
   color: #535353;
 }
 
-
-
-#returnPolicy{ 
+#returnPolicy {
   border: none;
   color: #406eb5;
   text-decoration: underline;
-  width: 100%;
+  width: 150px;
   background-color: #fff;
   height: 22px;
   font-size: 16px;
+  padding-top: 1rem;
 }
-
 
 #returnPolicy:hover {
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
-

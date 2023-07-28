@@ -12,19 +12,18 @@ const BodyContainer = () => {
   const { modal } = useContext(ModalContext);
 
   return (
-    <div
-      id="bodyContainer"
-      className={modal === true ? "blurred" : "notBlurred"}
-    >
-      <TopFullContent />
-      <div id="display">
-        <ImageContainer />
-        <div id="display-details">
-          <ProductHeader />
-          <BuyBox />
+    <div id="bodyContainer">
+      <div id="bcDiv" className={modal === true ? "blurred" : "notBlurred"}>
+        <TopFullContent />
+        <div id="display">
+          <ImageContainer />
+          <div id="display-details">
+            <ProductHeader />
+            <BuyBox />
+          </div>
         </div>
-      </div>
-      <BelowTheFold />
+        <BelowTheFold />
+      </div>{" "}
     </div>
   );
 };

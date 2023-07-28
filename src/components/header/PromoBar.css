@@ -6,6 +6,7 @@
   letter-spacing: -0.16px;
   line-height: .8;
   height: 45px;
+  box-shadow: inset 0 0 4px 2px #333;
 }
 
 .carouselDiv {
@@ -29,7 +30,7 @@
   border: none;
 }
 
-#nextBtnSVG,
-#previousBtnSVG {
+.nextBtn:hover,
+.previousBtn:hover {
   cursor: pointer;
 }
