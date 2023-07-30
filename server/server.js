@@ -159,6 +159,35 @@ app.delete("/product/:id", async (REQ, RES) => {
     }
 });
 
+// get all reviews
+app.get("/review", async (REQ, RES) => {
+    try {
+        const results = await pool.query("SELECT * FROM review ORDER BY id ASC");
+        RES.status(200).send(results.rows); return;
+    }
+    catch (error) {
+        console.error("Server caught the following error: ", error.message);
+        RES.status(500).send("Internal server error"); return;
+    }
+});
+
+// get one review
+app.get("/review/:id", async (REQ, RES) => {
+    const { id } = REQ.params;
+    try {
+        const results = await pool.query("SELECT * FROM review WHERE id = $1", [id]);
+        if (results.rowCount === 0) {
+            RES.status(404).send("No resource found"); return;
+        } else {
+            RES.status(200).json(results.rows[0]); return;
+        }
+    }
+    catch (error) {
+        console.error("Server caught the following error: ", error.message);
+        RES.status(500).send("Internal server error"); return;
+    }
+});
+
 // listener
 app.listen(PORT, () => {
     console.log("Server running, port...", PORT);
