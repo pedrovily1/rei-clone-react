@@ -20,7 +20,7 @@ const CartModal = () => {
       <div
         id="modalContainer"
         className={modal === true ? "showModal" : "hideModal"}
-        onClick={stopPropr}
+        onClick={stopProp}
       >
         <ModalForCartBtn />
       </div>

@@ -33,7 +33,7 @@ const ModalForCartBtn = () => {
             </div>
             <div id='modal-buttons'>
                 <button className='grn'>Cart & Checkout</button>
-                <button className='gry'>Continue Shopping</button>
+                <button className='gry' onClick={hide}>Continue Shopping</button>
             </div>
             <h1>Get the most out of your gear</h1>
             <span>Shop handpicked accessories from our experts</span>
