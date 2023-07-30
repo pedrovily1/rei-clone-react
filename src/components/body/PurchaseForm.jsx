@@ -172,7 +172,7 @@ const PurchaseForm = () => {
       <div id="becomeMember">
         <div id="memberDiv">
           <span id="memberText">
-            Members get an estimated {<strong id="savings">$14.90</strong>} back
+            Members get an estimated{<strong id="savings">$14.90</strong>}back
             on this item.
           </span>
           <div className="checkboxContainer">
