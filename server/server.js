@@ -27,18 +27,6 @@ app.use(
     cors({ origin: '*' }) // cors
 );
 
-// test endpoint (will be deleted after 7/24/2023)
-app.get("/test", async (REQ, RES) => {
-    try {
-        const results = await pool.query("SELECT * FROM product ORDER BY id ASC;");
-        RES.json(results.rows); return;
-    }
-    catch (error) {
-        console.error(error.message);
-        RES.status(500).send("Internal Server Error!");
-    }
-});
-
 // get all route
 app.get("/product", async (REQ, RES) => {
     try {
