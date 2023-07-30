@@ -3,7 +3,9 @@
   height: 50%;
 }
 
-.control-dots, .carousel button, .carousel .carousel-status {
+.control-dots,
+.carousel button,
+.carousel .carousel-status {
   visibility: collapse;
 }
 
@@ -32,11 +34,14 @@
 
 .thumb {
   padding-top: 0.5rem;
-  width: 4rem;
-  height: 6rem;
+  width: 80px;
+  height: auto;
+}
+
+#imagecontainer li {
+  height: auto;
 }
 
 .thumb img {
   object-fit: contain;
 }
-
