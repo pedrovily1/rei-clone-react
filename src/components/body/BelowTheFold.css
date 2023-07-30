@@ -433,9 +433,8 @@
 /* MAY LIKE SECTION  */
 .mayLikeFlexBox {
   display: flex;
-  padding: 1.5rem;
-  border: 2px solid green;
 }
+
 /* Review SECTION  */
 .reviewFlexbox {
   display: flex;

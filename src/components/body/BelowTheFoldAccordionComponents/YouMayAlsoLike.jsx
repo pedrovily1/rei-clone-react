@@ -1,23 +1,33 @@
 import "./YouMayAlsoLike.css";
-// IMPORT PRODUCT IMAGES
+// IMPORT YOU MAY ALSO LIKE PRODUCT IMAGES
 import BottleOne from "/src/assets/YouMayAlsoLike/Nalegene-poly-bottle.avif";
 import BottleTwo from "/src/assets/YouMayAlsoLike/nalgene-poly-bottle 1oz.avif";
 import CotoPaxi from "/src/assets/YouMayAlsoLike/CotoPaxi.avif";
 import BluePackingCube from "/src/assets/YouMayAlsoLike/expandable-packing-cubeset.avif";
 import Thule from "/src/assets/YouMayAlsoLike/thule-compression.avif";
 import StraightJar from "/src/assets/YouMayAlsoLike/straight-side-jar.jpeg";
+// IMPORT PEOPLE ALSO VIEWDED
+import CourierDog from "/src/assets/PeopleAlsoViewed/Courier-Dog.jpeg";
+import Fjallraven from "/src/assets/PeopleAlsoViewed/Fjallraven-abisko.avif";
+import Matador from "/src/assets/PeopleAlsoViewed/Matador-SEG45.avif";
+import MetroSafe from "/src/assets/PeopleAlsoViewed/MetroSafe.jpeg";
+import OspreyPorter from "/src/assets/PeopleAlsoViewed/Osprey-Porter.avif";
+import SunDogPack from "/src/assets/PeopleAlsoViewed/Sun-Dog-Pack.avif";
+
+// IMPORT REVIEW STARS
 import Star from "/src/assets/Star.svg";
+import EmptyStar from "/src/assets/Starempty.svg";
 
 const YouMayAlsoLike = () => {
   return (
     <>
       <li className="youMayLikeTotalSection">
-        <div id="mayLikeMainDiv">
+        <div className="mayLikeMainDiv">
           <div id="mayLikeTopSection">
-            <div id="topHeader">
-              <h2 id="topHeaderH2">You may also like</h2>
+            <div className="header">
+              <h2 className="headerH2">You may also like</h2>
 
-              <div id="carousel-component_dots">
+              <div className="carousel-component_dots">
                 <ol className="carouselDotsOL">
                   <li className="carouselDotsLi">
                     <button className="carouselDotsButton"></button>
@@ -35,7 +45,7 @@ const YouMayAlsoLike = () => {
               </div>
             </div>
           </div>
-          <ul className="carousel-component__track">
+          <div className="carousel-component__track">
             {/* FIRST BOTTLE */}
             <li className="productsLi">
               <div className="productImageContainer">
@@ -218,47 +228,62 @@ const YouMayAlsoLike = () => {
                 <span>$1.55</span>
               </div>
             </li>
-          </ul>
+          </div>
           <br></br>
-          <div id="mayLikeBottomSection">
+          {/* PEOPLE VIEWED SECTION */}
+          <div className="mayLikeMainDiv">
             <div id="mayLikeTopSection">
-              <div id="topHeader">
-                <h2 id="topHeaderH2">People also viewed</h2>
+              <div className="header">
+                <h2 className="headerH2">People also viewed</h2>
 
-                <div id="carousel-component_dots">
-                  <ol className="carouselDotsOL">
-                    <li className="carouselDotsLi">
-                      <button className="carouselDotsButton"></button>
-                    </li>
-                    <li className="carouselDotsLi">
-                      <button className="carouselDotsButton"></button>
-                    </li>
-                    <li className="carouselDotsLi">
-                      <button className="carouselDotsButton"></button>
-                    </li>
-                    <li className="carouselDotsLi">
-                      <button className="carouselDotsButton"></button>
-                    </li>
-                  </ol>
-                </div>
+               
               </div>
             </div>
-            <ul className="carousel-component__track">
-              {/* FIRST BOTTLE */}
+            <div className="carousel-component__track">
+              {/* Matador Bag */}
               <li className="productsLi">
                 <div className="productImageContainer">
                   <div className="ImageHolder">
                     <img
                       className="productImg"
-                      src={BottleOne}
+                      src={Matador}
                       loading="lazy"
                     ></img>
                   </div>
                 </div>
                 <div className="productDesc">
-                  <span className="productBrand">Nalgene</span>
+                  <span className="productBrand">Matador</span>
+                  <span className="productName">SEG45 Travel Pack</span>
+                </div>
+                <div className="productRating">
+                  <span>
+                    <img src={Star}></img>
+                    <img src={Star}></img>
+                    <img src={Star}></img>
+                    <img src={Star}></img>
+                    <img src={EmptyStar}></img>
+                  </span>
+                  <span className="numOfReviews">(19)</span>
+                </div>
+                <div className="productPrice">
+                  <span>$200.00</span>
+                </div>
+              </li>
+              {/* SunDogPack */}
+              <li className="productsLi">
+                <div className="productImageContainer">
+                  <div className="ImageHolder">
+                    <img
+                      className="productImg"
+                      src={SunDogPack}
+                      loading="lazy"
+                    ></img>
+                  </div>
+                </div>
+                <div className="productDesc">
+                  <span className="productBrand">Big Agnes</span>
                   <span className="productName">
-                    Polyethylene Bottle - 2 fl. oz.
+                    Sun Dog 45 L Pack - Women's
                   </span>
                 </div>
                 <div className="productRating">
@@ -267,29 +292,29 @@ const YouMayAlsoLike = () => {
                     <img src={Star}></img>
                     <img src={Star}></img>
                     <img src={Star}></img>
-                    <img src={Star}></img>
+                    <img src={EmptyStar}></img>
                   </span>
-                  <span className="numOfReviews">(80)</span>
+                  <span className="numOfReviews">(3)</span>
                 </div>
                 <div className="productPrice">
-                  <span>$1.55</span>
+                  <span>$229.95</span>
                 </div>
               </li>
-              {/* SECOND BOTTLE */}
+              {/* MetroSafe */}
               <li className="productsLi">
                 <div className="productImageContainer">
                   <div className="ImageHolder">
                     <img
                       className="productImg"
-                      src={BottleTwo}
+                      src={MetroSafe}
                       loading="lazy"
                     ></img>
                   </div>
                 </div>
                 <div className="productDesc">
-                  <span className="productBrand">Nalgene</span>
+                  <span className="productBrand">Pacsafe</span>
                   <span className="productName">
-                    Polyethylene Bottle - 1 fl. oz.
+                    Metrosafe X Anti-Theft 16" Commuter Pack
                   </span>
                 </div>
                 <div className="productRating">
@@ -297,31 +322,29 @@ const YouMayAlsoLike = () => {
                     <img src={Star}></img>
                     <img src={Star}></img>
                     <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
                   </span>
-                  <span className="numOfReviews">(71)</span>
+                  <span className="numOfReviews">(2)</span>
                 </div>
                 <div className="productPrice">
-                  <span>$1.50</span>
+                  <span>$149.95</span>
                 </div>
               </li>
-              {/* PACKING CUBE SET BLUE */}
+              {/* Osprey Porter 30 travel */}
               <li className="productsLi">
                 <div className="productImageContainer">
                   <div className="ImageHolder">
                     <img
                       className="productImg"
-                      src={BluePackingCube}
+                      src={OspreyPorter}
                       loading="lazy"
                     ></img>
                   </div>
                 </div>
                 <div className="productDesc">
-                  <span className="productBrand">Nalgene</span>
-                  <span className="productName">
-                    Polyethylene Bottle - 2 fl. oz.
-                  </span>
+                  <span className="productBrand">Osprey</span>
+                  <span className="productName">Porter 30 Travel Pack</span>
                 </div>
                 <div className="productRating">
                   <span>
@@ -329,108 +352,75 @@ const YouMayAlsoLike = () => {
                     <img src={Star}></img>
                     <img src={Star}></img>
                     <img src={Star}></img>
-                    <img src={Star}></img>
+                    <img src={EmptyStar}></img>
                   </span>
-                  <span className="numOfReviews">(80)</span>
+                  <span className="numOfReviews">(20)</span>
                 </div>
                 <div className="productPrice">
-                  <span>$1.55</span>
+                  <span>$165.00</span>
                 </div>
               </li>
-              {/* PACKING CUBE SET WHITE */}
+              {/* Abisko Hike 35 */}
               <li className="productsLi">
                 <div className="productImageContainer">
                   <div className="ImageHolder">
                     <img
                       className="productImg"
-                      src={Thule}
+                      src={Fjallraven}
                       loading="lazy"
                     ></img>
                   </div>
                 </div>
                 <div className="productDesc">
-                  <span className="productBrand">Nalgene</span>
+                  <span className="productBrand">Fjallraven</span>
                   <span className="productName">
-                    Polyethylene Bottle - 2 fl. oz.
+                    Abisko Hike 35 Travel Pack
                   </span>
                 </div>
                 <div className="productRating">
                   <span>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
                   </span>
-                  <span className="numOfReviews">(80)</span>
+                  <span className="numOfReviews">(0)</span>
                 </div>
                 <div className="productPrice">
-                  <span>$1.55</span>
+                  <span>$200.00</span>
                 </div>
               </li>
-              {/* STRAIGHTSIDEJAR BOTTLE */}
+              {/* Thule Courier Dog Trailer */}
               <li className="productsLi">
                 <div className="productImageContainer">
                   <div className="ImageHolder">
                     <img
                       className="productImg"
-                      src={StraightJar}
+                      src={CourierDog}
                       loading="lazy"
                     ></img>
                   </div>
                 </div>
                 <div className="productDesc">
-                  <span className="productBrand">Nalgene</span>
-                  <span className="productName">
-                    Polyethylene Bottle - 2 fl. oz.
-                  </span>
+                  <span className="productBrand">Thule</span>
+                  <span className="productName">Courier Dog Trailer Kit</span>
                 </div>
                 <div className="productRating">
                   <span>
                     <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
+                    <img src={EmptyStar}></img>
                   </span>
-                  <span className="numOfReviews">(80)</span>
+                  <span className="numOfReviews">(7)</span>
                 </div>
                 <div className="productPrice">
-                  <span>$1.55</span>
+                  <span>$149.95</span>
                 </div>
               </li>
-              {/* COTOPAXI 90s THEME TRAVEL KIT */}
-              <li className="productsLi">
-                <div className="productImageContainer">
-                  <div className="ImageHolder">
-                    <img
-                      className="productImg"
-                      src={CotoPaxi}
-                      loading="lazy"
-                    ></img>
-                  </div>
-                </div>
-                <div className="productDesc">
-                  <span className="productBrand">Nalgene</span>
-                  <span className="productName">
-                    Polyethylene Bottle - 2 fl. oz.
-                  </span>
-                </div>
-                <div className="productRating">
-                  <span>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                    <img src={Star}></img>
-                  </span>
-                  <span className="numOfReviews">(80)</span>
-                </div>
-                <div className="productPrice">
-                  <span>$1.55</span>
-                </div>
-              </li>
-            </ul>
+            </div>
           </div>
         </div>
       </li>
