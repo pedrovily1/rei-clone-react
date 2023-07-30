@@ -4,6 +4,8 @@ const ShippingContext = createContext();
 
 export const ShippingProvider = ({ children }) => {
   const [shipCheck, setShipCheck] = useState(null);
+  const [isAddedToCart, setIsAddedToCart] = useState(false)
+  const [cartValue, setCartValue] = useState(149)
 
   // functionality and functions can go here
 
@@ -12,6 +14,10 @@ export const ShippingProvider = ({ children }) => {
       value={{
         shipCheck,
         setShipCheck,
+        isAddedToCart,
+        setIsAddedToCart,
+        cartValue,
+        setCartValue
       }}
     >
       {children}

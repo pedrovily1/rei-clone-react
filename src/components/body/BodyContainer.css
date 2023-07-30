@@ -7,9 +7,10 @@
 }
 
 #bcDiv {
+  display:flex;
   width: 1232px;
   justify-content: center;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: wrap;
 }
 
