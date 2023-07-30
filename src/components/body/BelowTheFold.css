@@ -418,8 +418,7 @@
 .accordion-wrapper-div {
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
-  padding: 1rem;
+  padding-top: 2rem;
 }
 
 .accordion-group {
@@ -433,6 +432,7 @@
 /* MAY LIKE SECTION  */
 .mayLikeFlexBox {
   display: flex;
+  margin-top: 2.5rem;
 }
 
 /* Review SECTION  */
