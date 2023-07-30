@@ -14,12 +14,13 @@
   font-size: 15px;
   font-family: Graphik, Helvetica Neue, sans-serif;
   font-weight: 400;
-  text-decoration: underline;
+
   line-height: 22px;
   word-wrap: break-word;
   margin-left: 3px;
   display: flex;
   flex-direction: column;
+
 }
 
 .product-name {
@@ -35,6 +36,20 @@
   padding-bottom: 1rem;
 }
 
+
+.product-name a {
+  text-decoration: none;
+}
+
+
+#timbukLink {
+  color: #406eb5;
+
+}
+
+#timbukLink:hover {
+  text-decoration: none;
+}
 
 
 

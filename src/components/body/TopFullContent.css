@@ -6,11 +6,14 @@
   bottom: 1rem;
   right: 3.75rem;
   font-size: large;
+  padding: 1rem;
 }
 
 .navComp {
   display: flex;
   align-items: center;
+  height: 3rem;
+
 }
 
 .navComp a,

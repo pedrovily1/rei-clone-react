@@ -149,3 +149,12 @@
 #sign-in {
    padding-left: 5px;
 }
+
+
+
+#sign-in:hover,
+#cart:hover {
+   text-decoration: underline;
+}
+
+
