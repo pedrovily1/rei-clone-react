@@ -1,6 +1,7 @@
 import "./CartModal.css";
 import { useContext } from "react";
 import ModalContext from "../../context/modalContext";
+import ModalForCartBtn from "../modal/ModalForCartBtn";
 
 const CartModal = () => {
   const { modal, overlayRef } = useContext(ModalContext);
@@ -12,8 +13,9 @@ const CartModal = () => {
         id="modalContainer"
         className={modal === true ? "showModal" : "hideModal"}
       >
-        This is some stuff that gets rendered or hidden
+        <ModalForCartBtn />
       </div>
+
     </>
   );
 };
