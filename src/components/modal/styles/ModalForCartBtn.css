@@ -13,6 +13,7 @@
     right: auto;
     padding: 24px;
     background-color:white;
+    z-index: 300;
 }
 
 #ModalForCartBtn h1 {
