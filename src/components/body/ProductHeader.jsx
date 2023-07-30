@@ -6,7 +6,7 @@ const ProductHeader = () => {
     <>
       <div className="product">
         <div className="product-brand">
-          <a href="https://www.rei.com/b/timbuk2">Timbuk2</a>
+          <a href="https://www.rei.com/b/timbuk2" id="timbukLink"><span>Timbuk2</span></a>
         </div>
         <div className="product-name">Timbuk2 Muttmover Luxe Pack</div>
         <RatingId />

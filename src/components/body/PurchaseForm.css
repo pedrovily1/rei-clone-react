@@ -1,3 +1,4 @@
+
 #purchaseForm * {
   box-sizing: border-box;
 }
@@ -39,6 +40,12 @@
   background-color: #fff;
   border-radius: 4px;
   align-items: center;
+  transition: box-shadow .3s ease;
+}
+
+#color button:hover {
+  box-shadow: 0 2px 0 0 #d1d1d1;
+  cursor: pointer;
 }
 
 #quantity {
@@ -71,8 +78,19 @@
   border: none;
 }
 
-#quantity button:hover {
+.useableBtn:hover {
   cursor: pointer;
+
+}
+
+#minusBtn {
+  width: 21px;
+  height: 21px;
+  padding-right: 28px;
+}
+
+.unusableBtn:hover {
+  cursor: url('../../assets/unusableBtn.svg'), auto;
 }
 
 #quantity input {
@@ -80,6 +98,16 @@
   border: 1px solid #747474;
   height: 40px;
   border-radius: 4px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+#quantity input::-webkit-inner-spin-button,
+#quantity input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #mushrooms {
@@ -404,4 +432,5 @@
 
 #inStock button:hover {
   text-decoration: none;
+  cursor: pointer;
 }

@@ -6,18 +6,31 @@ import { useContext } from "react";
 import ShippingContext from "../../context/shippingContext";
 import ModalContext from "../../context/modalContext";
 import { useState } from "react";
+import fullMinus from "../../assets/fullMinus.svg";
 
 const PurchaseForm = () => {
-  const { shipCheck, setShipCheck } = useContext(ShippingContext);
+  const {
+    shipCheck,
+    setShipCheck,
+    setIsAddedToCart,
+    isAddedToCart,
+    cartValue,
+    setCartValue,
+  } = useContext(ShippingContext);
   const { setModal } = useContext(ModalContext);
 
-  const [number, setNumber] = useState(1)
-  
+  const [number, setNumber] = useState(1);
 
- 
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState("");
 
-  
+  const handleCheckboxClick = () => {
+    setIsAddedToCart(!isAddedToCart);
+    if (!isAddedToCart) {
+      setCartValue(cartValue + 30);
+    } else {
+      setCartValue(cartValue - 30);
+    }
+  };
 
   const handleShipClick = (e) => {
     e.preventDefault();
@@ -29,26 +42,24 @@ const PurchaseForm = () => {
     setModal(true);
   };
 
-
-
-
   const handleQty = (e) => {
-    e.preventDefault()
-    if (e.currentTarget.id === 'minusBtn') {
-      setNumber(number - 1)
+    e.preventDefault();
+    if (e.currentTarget.id === "minusBtn") {
+      setNumber(number - 1);
+      setCartValue(cartValue - 149);
     } else {
-      setNumber(number + 1)
+      setNumber(number + 1);
+      setCartValue(cartValue + 149);
     }
-  }
-
-
+  };
 
   const changeNum = (e) => {
-    setValue(e.currentTarget.value)
-    console.log(value)
-  }
-
-
+    setValue(e.target.value);
+    setCartValue(e.target.value * 149);
+    isNaN(parseInt(e.target.value))
+      ? setNumber(1)
+      : setNumber(parseInt(e.target.value));
+  };
 
   return (
     // <div id="formHolder">
@@ -66,11 +77,20 @@ const PurchaseForm = () => {
       <div id="quantity">
         <span>Quantity</span>
         <div>
-          <button id="minusBtn" onClick={handleQty}>
-            <img src={minus}></img>
+          <button
+            id="minusBtn"
+            onClick={handleQty}
+            className={number > 1 ? "useableBtn" : "unusableBtn"}
+          >
+            <img src={number > 1 ? fullMinus : minus}></img>
           </button>
-          <input type="number" onChange={changeNum}></input>
-          <button id="plusBtn" onClick={handleQty}>
+          <input
+            type="number"
+            onChange={changeNum}
+            value={number}
+            step="any"
+          ></input>
+          <button id="plusBtn" onClick={handleQty} className="useableBtn">
             <img src={plus}></img>
           </button>
         </div>
@@ -88,7 +108,7 @@ const PurchaseForm = () => {
             id="storeShip"
           >
             <div className="flexDiv">
-              <span className="shipBtnTitle">Ship to Store</span>
+              <span className="shipBtnTitle">Ship to store</span>
               <img
                 src={greenCheck}
                 id="greenCheck"
@@ -119,7 +139,7 @@ const PurchaseForm = () => {
             id="addressShip"
           >
             <div className="flexDiv">
-              <span className="shipBtnTitle">Ship to Store</span>
+              <span className="shipBtnTitle">Ship to address</span>
               <img
                 src={greenCheck}
                 id="greenCheck"
@@ -156,7 +176,11 @@ const PurchaseForm = () => {
             on this item.
           </span>
           <div className="checkboxContainer">
-            <input type="checkbox" id="checkBox"></input>
+            <input
+              type="checkbox"
+              id="checkBox"
+              onClick={handleCheckboxClick}
+            ></input>
             <label htmlFor="checkBox" id="membershipLabel">
               <span id="checkBoxText">
                 Add a{" "}
@@ -174,7 +198,7 @@ const PurchaseForm = () => {
       </span>
 
       <button id="addToCartBtn" onClick={showModal}>
-        {<strong>Add to cart-$149.00</strong>}
+        {<strong>Add to cart-${cartValue}.00</strong>}
       </button>
 
       <div id="inStock">
