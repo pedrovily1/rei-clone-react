@@ -13,7 +13,7 @@ export const ModalProvider = ({ children }) => {
     if (modal === true) {
       overlayRef.current.style.visibility = "visible";
     } else {
-      overlayRef.current.style.visibility = "hidden";
+      overlayRef.current.style.visibility = "collapse";
     }
   }, [modal]);
 
