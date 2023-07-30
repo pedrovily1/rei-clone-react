@@ -13,39 +13,41 @@ const FeatureAndTechSection = () => {
             <div id="features-accordion__content-container">
               <section id="features-label">
                 <ul id="product-features__list">
-                  <li>
+                  <li className="featuresListLi">
                     • Spacious main compartment securely and comfortably carries
                     small pups up to 20 lbs.
                   </li>
-                  <li>
+                  <li className="featuresListLi">
                     • Durable ripstop nylon lining is easy to wipe clean in case
                     your dog has an accident
                   </li>
-                  <li>
+                  <li className="featuresListLi">
                     • Multiple external pockets provide easy access to stored
                     personal items, as well as your pet's leash and treats
                   </li>
-                  <li>
+                  <li className="featuresListLi">
                     • Includes a collapsible, food-grade TPU water dish when
                     it's time for your pup to hydrate
                   </li>
-                  <li>
+                  <li className="featuresListLi">
                     • Adjustable and removable sternum and waist straps offer
                     extra support for longer hauls
                   </li>
-                  <li>
+                  <li className="featuresListLi">
                     • Padded air-mesh back panel and shoulder straps enhance
                     comfort and breathability
                   </li>
                 </ul>
                 <p className="product-features__origin">Imported.</p>
-                <button>
-                  <span>
-                    Important <strong>WARNING</strong> for California residents
+
+                <span style={{ fontSize: "medium" }}>
+                  Important <strong>WARNING</strong> for California residents
+                </span>
+
+                <a href="https://www.rei.com/b/timbuk2/c/dog-carriers">
+                  <span style={{ fontSize: "medium" }}>
+                    View all Timbuk2 Dog Carriers
                   </span>
-                </button>
-                <a>
-                  <span>View all Timbuk2 Dog Carriers</span>
                 </a>
               </section>
             </div>
