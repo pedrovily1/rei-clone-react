@@ -11,7 +11,7 @@ import Checkmark from '/src/assets/checkmark.svg';
 import Thumbsupoutline from '/src/assets/Thumbsupoutline.svg';
 import Thumbsdownoutline from '/src/assets/Thumbsdownoutline.svg';
 
-const ReviewSection = () => {
+const ReviewSection = ({ comment }) => {
   return (
     <>
       <li id="product-reviews-accordion">
@@ -184,7 +184,7 @@ const ReviewSection = () => {
             </div>
             <div className="footer-review">
               <div className="helpful-review">
-                <img  className="thumb-helpful" src={Thumbsup} alt=""></img>
+                <img className="thumb-helpful" src={Thumbsup} alt=""></img>
                 65 people found this helpful
               </div>
 
@@ -197,7 +197,7 @@ const ReviewSection = () => {
         </div>
 
         <div className="image-costumer">
-        <hr className="black-line-image"></hr>
+          <hr className="black-line-image"></hr>
 
           <div className="costumer-images">Customer Images</div>
           <div id="image-row">
@@ -292,7 +292,8 @@ const ReviewSection = () => {
               <div className="review-title">It's a nice backpack if your dog is 12 lbs or less</div>
               <div className="review-date">a month ago</div>
             </div>
-            <div className="review-content">My sister has two Havanese dogs I take on bike rides. The girl weighs 10 lbs and loves riding in this backpack, also these developers did an amazing job building this website...</div>
+            <div className="review-content">   <div>{JSON.stringify(comment)}</div>
+            </div>
             <div className="review-footer">
               <div className="review-age"><span className="bold-letter">Age</span> 34-45</div>
               <div className="review-recommendation">

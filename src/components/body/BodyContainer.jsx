@@ -8,7 +8,7 @@ import CartModal from "./CartModal";
 import ModalContext from "../../context/modalContext";
 import { useContext } from "react";
 
-const BodyContainer = () => {
+const BodyContainer = ({ comment }) => {
   const { modal } = useContext(ModalContext);
 
   return (
@@ -22,7 +22,7 @@ const BodyContainer = () => {
             <BuyBox />
           </div>
         </div>
-        <BelowTheFold />
+        <BelowTheFold comment={comment} />
       </div>{" "}
     </div>
   );

@@ -7,7 +7,7 @@ import Dropdown from "/src/assets/Dropdown.svg";
 import Thumbsupout from "/src/assets/Thumbsupoutline.svg";
 import Thumbsdownout from "/src/assets/Thumbsdownoutline.svg";
 
-const BelowTheFold = () => {
+const BelowTheFold = ( {comment}) => {
   return (
     <>
       <div id="belowTheFold">
@@ -44,7 +44,7 @@ const BelowTheFold = () => {
               <YouMayAlsoLike />
             </div>
             {/* PRODUCT REVIEWS SECTION */}
-            <ReviewSection />
+            <ReviewSection comment={comment} />
             {/* PRODUCT QUESTIONS SECTION */}
             <li id="product-questions-accordion">
               <div className="questions-container">
