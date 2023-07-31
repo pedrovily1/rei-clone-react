@@ -25,7 +25,7 @@
   overflow: hidden;
   margin: auto;
   width: 59%;
-  transition: height .15s ease-in;
+  transition: height 0.15s ease-in;
 }
 
 .carousel * {

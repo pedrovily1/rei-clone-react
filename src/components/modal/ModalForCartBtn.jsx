@@ -1,6 +1,6 @@
-import './styles/ModalForCartBtn.css';
-import doggo from '/src/assets/ProductDivPhotos/DogImage.jpeg';
-import x from '/src/assets/X.svg';
+import "./styles/ModalForCartBtn.css";
+import doggo from "/src/assets/ProductDivPhotos/DogImage.jpeg";
+import x from "/src/assets/X.svg";
 import { useContext } from "react";
 import ModalContext from "../../context/modalContext";
 import ShippingContext from "../../context/shippingContext";
@@ -9,7 +9,6 @@ const ModalForCartBtn = () => {
     const { setModal } = useContext(ModalContext);
 
     const { cartValue } = useContext(ShippingContext)
-
     const hide = (e) => {
         e.preventDefault();
         setModal(false);
@@ -33,7 +32,7 @@ const ModalForCartBtn = () => {
                 </div>
             </div>
             <div id='cart-subtotal'>
-                <h2>Cart subtotal: ${cartValue } </h2> <span> ({ Math.floor(cartValue / 149) } items)</span>
+            <h2>Cart subtotal: ${cartValue } </h2> <span> ({ Math.floor(cartValue / 149) } items)</span>
             </div>
             <div id='modal-buttons'>
                 <button className='grn'>Cart & Checkout</button>
@@ -50,5 +49,4 @@ const ModalForCartBtn = () => {
     )
 }
 
-
-export default ModalForCartBtn
+export default ModalForCartBtn;

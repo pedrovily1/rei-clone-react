@@ -7,25 +7,19 @@ const CartModal = () => {
   const { modal, setModal, overlayRef } = useContext(ModalContext);
 
   const closeModal = (e) => {
-    console.log(e.currentTarget);
-    e.stopPropagation();
     setModal(false);
-  };
-
-  const stopProp = (e) => {
-
   };
 
   return (
     <>
-      <div id="overlay" ref={overlayRef} onClick={closeModal}> </div>
+      <div id="overlay" ref={overlayRef}></div>
       <div
         id="modalContainer"
         className={modal === true ? "showModal" : "hideModal"}
+        onClick={closeModal}
       >
         <ModalForCartBtn />
       </div>
-
     </>
   );
 };
