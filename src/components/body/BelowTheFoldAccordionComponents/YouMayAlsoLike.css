@@ -42,6 +42,7 @@
 .carousel-component__track {
   display: flex;
   gap: 3rem;
+  overflow: hidden;
 }
 .productsLi {
   display: flex;
@@ -90,4 +91,47 @@
 }
 .productPrice {
   font-size: small;
+}
+
+/* slider handles  */
+
+.leftHandle {
+  position: relative;
+  top: 8rem;
+  left: 2rem;
+  display: inline-flex;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+.leftHandle:hover {
+  border: 3px solid black;
+}
+
+.NeedToFlipArrow {
+  transform: rotate(180deg);
+}
+
+.rightHandle {
+  position: relative;
+  top: 8rem;
+  right: 2rem;
+  border: 1px solid grey;
+  cursor: pointer;
+  display: inline-flex;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightHandle:hover {
+  border: 3px solid black;
 }
