@@ -10,6 +10,10 @@ import CotoPaxi from "/src/assets/YouMayAlsoLike/CotoPaxi.avif";
 import BluePackingCube from "/src/assets/YouMayAlsoLike/expandable-packing-cubeset.avif";
 import Thule from "/src/assets/YouMayAlsoLike/thule-compression.avif";
 import StraightJar from "/src/assets/YouMayAlsoLike/straight-side-jar.jpeg";
+import RoverDogPack from "/src/assets/YouMayAlsoLike/RoverDogPack.jpeg";
+import Basil from "/src/assets/YouMayAlsoLike/Basil.jpeg"
+import FrontRange from "/src/assets/YouMayAlsoLike/FrontRangeDogPack.jpeg"
+import KnowAHitch from "/src/assets/YouMayAlsoLike/KnowAHitch.jpeg"
 
 // IMPORT PEOPLE ALSO VIEWDED
 import CourierDog from "/src/assets/PeopleAlsoViewed/Courier-Dog.jpeg";
@@ -18,10 +22,11 @@ import Matador from "/src/assets/PeopleAlsoViewed/Matador-SEG45.avif";
 import MetroSafe from "/src/assets/PeopleAlsoViewed/MetroSafe.jpeg";
 import OspreyPorter from "/src/assets/PeopleAlsoViewed/Osprey-Porter.avif";
 import SunDogPack from "/src/assets/PeopleAlsoViewed/Sun-Dog-Pack.avif";
-
 // IMPORT REVIEW STARS
 import Star from "/src/assets/Star.svg";
 import EmptyStar from "/src/assets/Starempty.svg";
+//IMPORT ARROWS FOR CARO
+import ArrowRight from "/src/assets/ArrowRight.svg"
 
 const YouMayAlsoLike = () => {
   //May Like Items
@@ -104,6 +109,58 @@ const YouMayAlsoLike = () => {
       NumOfReviews: "(75)",
       Price: "$50.00",
     },
+    // {
+    //   id: 7,
+    //   Icon: RoverDogPack,
+    //   Brand: "OllyDog",
+    //   Name: "Rover Dog Pack",
+    //   ReviewStars1: Star,
+    //   ReviewStars2: Star,
+    //   ReviewStars3: Star,
+    //   ReviewStars4: Star,
+    //   ReviewStars5: EmptyStar,
+    //   NumOfReviews: "(22)",
+    //   Price: "$39.73",
+    // },
+    // {
+    //   id: 8,
+    //   Icon: Basil,
+    //   Brand: "Electra",
+    //   Name: "Basil Pet Carrier",
+    //   ReviewStars1: Star,
+    //   ReviewStars2: Star,
+    //   ReviewStars3: Star,
+    //   ReviewStars4: Star,
+    //   ReviewStars5: EmptyStar,
+    //   NumOfReviews: "(5)",
+    //   Price: "$185.00",
+    // },
+    // {
+    //   id: 9,
+    //   Icon: FrontRange,
+    //   Brand: "RuffWear",
+    //   Name: "Front Range Dog Day Pack",
+    //   ReviewStars1: Star,
+    //   ReviewStars2: Star,
+    //   ReviewStars3: Star,
+    //   ReviewStars4: Star,
+    //   ReviewStars5: EmptyStar,
+    //   NumOfReviews: "(38)",
+    //   Price: "$79.95",
+    // },
+    // {
+    //   id: 10,
+    //   Icon: KnowAHitch,
+    //   Brand: "RuffWear",
+    //   Name: "Knot-A-Hitch Campsite Dog - Hitching System",
+    //   ReviewStars1: Star,
+    //   ReviewStars2: Star,
+    //   ReviewStars3: Star,
+    //   ReviewStars4: Star,
+    //   ReviewStars5: Star,
+    //   NumOfReviews: "(10)",
+    //   Price: "$79.95",
+    // },
   ];
   //People Viewed Items
   const ItemsTwo = [
@@ -212,9 +269,15 @@ const YouMayAlsoLike = () => {
             </div>
           </div>
           <div className="carousel-component__track">
+            <button className="leftHandle">
+              <img className="NeedToFlipArrow" src={ArrowRight}></img>
+            </button>
             {ItemsOne.map((item) => {
               return <MayLikeCarouselItems item={item} key={item.id} />;
             })}
+            <button className="rightHandle">
+              <img src={ArrowRight}></img>
+            </button>
           </div>
           <br></br>
           {/* PEOPLE VIEWED SECTION */}
