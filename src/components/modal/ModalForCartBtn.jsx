@@ -9,12 +9,17 @@ const ModalForCartBtn = () => {
     const { setModal } = useContext(ModalContext);
 
     const { cartValue } = useContext(ShippingContext)
+
+    const stopProp = (e) => {
+        e.stopPropagation()
+    }
+
     const hide = (e) => {
         e.preventDefault();
         setModal(false);
     };
     return (
-        <div id='ModalForCartBtn'>
+        <div id='ModalForCartBtn' onClick={stopProp}>
             <div id='header-and-x'>
                 <h1>Added to cart</h1>
                 <button onClick={hide}>
