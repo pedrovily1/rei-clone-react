@@ -24,7 +24,7 @@
 }
 
 .product-name {
-  color: #494846;
+  /* color: #494846; */
   font-size: 28px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 32px;
@@ -36,13 +36,12 @@
   padding-bottom: 1rem;
 }
 
-
-.product-name a {
-  text-decoration: none;
+#timbukLink {
+  color:#406eb5
 }
 
 
-#timbukLink {
+#timbukLink span{
   color: #406eb5;
 
 }
@@ -50,6 +49,8 @@
 #timbukLink:hover {
   text-decoration: none;
 }
+
+
 
 
 
