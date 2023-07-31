@@ -27,18 +27,6 @@ app.use(
     cors({ origin: '*' }) // cors
 );
 
-// test endpoint (will be deleted after 7/24/2023)
-app.get("/test", async (REQ, RES) => {
-    try {
-        const results = await pool.query("SELECT * FROM product ORDER BY id ASC;");
-        RES.json(results.rows); return;
-    }
-    catch (error) {
-        console.error(error.message);
-        RES.status(500).send("Internal Server Error!");
-    }
-});
-
 // get all route
 app.get("/product", async (REQ, RES) => {
     try {
@@ -164,6 +152,35 @@ app.delete("/product/:id", async (REQ, RES) => {
             "DELETE FROM product WHERE id = $1 RETURNING *",
             [id]
         );
+        if (results.rowCount === 0) {
+            RES.status(404).send("No resource found"); return;
+        } else {
+            RES.status(200).json(results.rows[0]); return;
+        }
+    }
+    catch (error) {
+        console.error("Server caught the following error: ", error.message);
+        RES.status(500).send("Internal server error"); return;
+    }
+});
+
+// get all reviews
+app.get("/review", async (REQ, RES) => {
+    try {
+        const results = await pool.query("SELECT * FROM review ORDER BY id ASC");
+        RES.status(200).send(results.rows); return;
+    }
+    catch (error) {
+        console.error("Server caught the following error: ", error.message);
+        RES.status(500).send("Internal server error"); return;
+    }
+});
+
+// get one review
+app.get("/review/:id", async (REQ, RES) => {
+    const { id } = REQ.params;
+    try {
+        const results = await pool.query("SELECT * FROM review WHERE id = $1", [id]);
         if (results.rowCount === 0) {
             RES.status(404).send("No resource found"); return;
         } else {
