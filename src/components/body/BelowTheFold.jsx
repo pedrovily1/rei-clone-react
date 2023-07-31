@@ -7,7 +7,7 @@ import Dropdown from "/src/assets/Dropdown.svg";
 import Thumbsupout from "/src/assets/Thumbsupoutline.svg";
 import Thumbsdownout from "/src/assets/Thumbsdownoutline.svg";
 
-const BelowTheFold = () => {
+const BelowTheFold = ( {comment}) => {
   return (
     <>
       <div id="belowTheFold">
@@ -44,7 +44,7 @@ const BelowTheFold = () => {
               <YouMayAlsoLike />
             </div>
             {/* PRODUCT REVIEWS SECTION */}
-            <ReviewSection />
+            <ReviewSection comment={comment} />
             {/* PRODUCT QUESTIONS SECTION */}
             <li id="product-questions-accordion">
               <div className="questions-container">
@@ -105,7 +105,7 @@ const BelowTheFold = () => {
                   <div className="username2">REIservice</div>
                   <div className="timestamp">8 months ago</div>
                   <div className="interaction-section">
-                    <div className="end-of-page">
+                    <div className="end-of-page-questions">
                       <div className="helpful">
                         Helpful?
                         <img
@@ -155,7 +155,7 @@ const BelowTheFold = () => {
                   <div className="username2">REIservice</div>
                   <div className="timestamp">11 months ago</div>
                   <div className="interaction-section">
-                    <div className="end-of-page">
+                    <div className="end-of-page-questions">
                       <div className="helpful">
                         Helpful?
                         <img
@@ -204,7 +204,7 @@ const BelowTheFold = () => {
                   <div className="username2">REIservice</div>
                   <div className="timestamp">11 months ago</div>
                   <div className="interaction-section">
-                    <div className="end-of-page">
+                    <div className="end-of-page-questions">
                       <div className="helpful">
                         Helpful?
                         <img
