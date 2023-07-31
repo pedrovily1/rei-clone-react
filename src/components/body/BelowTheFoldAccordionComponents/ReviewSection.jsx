@@ -15,6 +15,7 @@ const ReviewSection = () => {
   return (
     <>
       <li id="product-reviews-accordion">
+        <div className="Review-text-Header">Reviews</div>
         <div className="section1">
           <div className="ratingSnapShotContainer">
             <div className="title">Rating Snapshot</div>
@@ -123,98 +124,103 @@ const ReviewSection = () => {
             </div>
           </div>
         </div>
+        <hr className="black-line-image"></hr>
+
         <div className="reviewCardsDiv">
           <div className="review-card">
-            <div className="header">Most Helpful Favorable Review</div>
-            <div className="main-section">
-              <div className="star-section">
-                <img src={Star} alt="" className="star"></img>
-                <img src={Star} alt="" className="star"></img>
-                <img src={Star} alt="" className="star"></img>
-                <img src={Star} alt="" className="star"></img>
-                <img src={Star} alt="" className="star"></img>
+            <div className="header-review-card">Most Helpful Favorable Review</div>
+            <div className="main-section-review">
+              <div className="star-section-review">
+                <img src={Starbold} alt="" className="star-review"></img>
+                <img src={Starbold} alt="" className="star-review"></img>
+                <img src={Starbold} alt="" className="star-review"></img>
+                <img src={Starbold} alt="" className="star-review"></img>
+                <img src={Starbold} alt="" className="star-review"></img>
               </div>
-              <div className="title">Great Pet Backpack</div>
-              <div className="reviewer-info">
-                <div className="name">MKOcean</div>
-                <div className="time">a year ago</div>
+              <div className="title-review">Great Pet Backpack</div>
+              <div className="reviewer-info-review">
+                <div className="name-review">MKOcean</div>
+                <div className="time-review">a year ago</div>
               </div>
 
-              <div className="review">
+              <div className="review-text">
                 Really love this pack. Super comfortable for someone with back…
               </div>
               <div className="review-show">Show full review</div>
             </div>
-            <div className="footer">
-              <div className="helpful">
-                <img src={Thumbsup} alt=""></img>
+            <div className="footer-review">
+              <div className="helpful-review">
+                <img className="thumb-helpful" src={Thumbsup} alt=""></img>
                 19 people found this helpful
               </div>
 
               <div className="show-reviews">
-                Show Reviews:
-                <div className="ratings">
-                  <div className="rating">
-                    <p className="text">5 </p>
-                    <img src={Star} alt=""></img>
-                  </div>
-                  <div className="rating">
-                    <p className="text">and 4</p>
-                    <img src={Star} alt=""></img>
-                  </div>
-                </div>
+                Show Reviews: 5 <img className="starbold" src={Starbold} alt=""></img> and 4 <img className="starbold" src={Starbold} alt=""></img>
+                <div className="border-review-1"></div>
               </div>
             </div>
           </div>
           <div className="review-card">
-            <div className="header">Most Helpful Critical Review</div>
-            <div className="main-section">
-              <div className="star-section">
-                <img src={Star} alt="" className="star"></img>
-                <img src={Starempty} alt="" className="star"></img>
-                <img src={Starempty} alt="" className="star"></img>
-                <img src={Starempty} alt="" className="star"></img>
-                <img src={Starempty} alt="" className="star"></img>
+            <div className="header-review-card">Most Helpful Critical Review</div>
+            <div className="main-section-review">
+              <div className="star-section-review">
+                <img src={Starbold} alt="" className="star-review"></img>
+                <img src={Starempty} alt="" className="star-review"></img>
+                <img src={Starempty} alt="" className="star-review"></img>
+                <img src={Starempty} alt="" className="star-review"></img>
+                <img src={Starempty} alt="" className="star-review"></img>
               </div>
-              <div className="title">Way smaller than described, returning</div>
-              <div className="reviewer-info">
-                <div className="name">Hiking20</div>
-                <div className="time">2 years ago</div>
+              <div className="title-review">Way smaller than described, returning</div>
+              <div className="reviewer-info-review">
+                <div className="name-review">Hiking20</div>
+                <div className="time-review">2 years ago</div>
               </div>
 
-              <div className="review">
+              <div className="review-text">
                 We bought this to carry our mini-schnauzer, who loves hiking.
-                She
+                She...
               </div>
-              <div className="review-show">Show full review</div>
+              <div className="review-show">  Show full review </div>
             </div>
-            <div className="footer">
-              <div className="helpful">
-                <img src={Thumbsup} alt=""></img>
+            <div className="footer-review">
+              <div className="helpful-review">
+                <img  className="thumb-helpful" src={Thumbsup} alt=""></img>
                 65 people found this helpful
               </div>
 
               <div className="show-reviews">
-                Show Reviews:
-                <div className="ratings">
-                  <div className="rating">
-                    <p className="text">3 </p>
-                    <img src={Star} alt=""></img>
-                  </div>
-                  <div className="rating">
-                    <p className="text">2</p>
-                    <img src={Star} alt=""></img>
-                  </div>
-                  <div className="rating">
-                    <p className="text">and 1</p>
-                    <img src={Star} alt=""></img>
-                  </div>
-                </div>
+                Show Reviews: 3 <img className="starbold" src={Starbold} alt="starbold2"></img> 2 <img className="starbold" src={Starbold} alt="starbold2"></img> and 1  <img className="starbold" src={Starbold} alt="starbold2"></img>
+                <div className="border-review-2"></div>
               </div>
             </div>
           </div>
         </div>
-       {/* { <div id="image-row">
+
+        <div className="image-costumer">
+        <hr className="black-line-image"></hr>
+
+          <div className="costumer-images">Customer Images</div>
+          <div id="image-row">
+
+            <div class="image-container-1">
+              <div class="gradient-box">
+                <img src="https://photos-us.bazaarvoice.com/photo/2/cGhvdG86cmVpLWluYw/99333e4d-8e98-5dd5-bf86-65e672102699" style={{ width: '175px', height: '175px' }} alt="Review Image 1" />
+                <img></img>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="gradient-box">
+                <img src="https://photos-us.bazaarvoice.com/photo/2/cGhvdG86cmVpLWluYw/c79e0778-2974-5ecf-adbd-08b3ab52c2ea" style={{ width: '175px', height: '175px' }} alt="Review Image 1" />            </div>
+            </div>
+            <div class="image-container">
+              <div class="gradient-box">
+                <img src="https://photos-us.bazaarvoice.com/photo/2/cGhvdG86cmVpLWluYw/baf39956-d950-5c7e-a847-673ad457f2e0" style={{ width: '175px', height: '175px' }} alt="Review Image 1" />            </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* { <div id="image-row">
           <div className="image-container">
             <div className="gradient-box">
               <img
@@ -250,7 +256,7 @@ const ReviewSection = () => {
               <div className="Review-Box">
                 <div className="Review-Display">
                   <div className="Reviews-Count">1 - 8 of 9 reviews</div>
-                   
+
                   <div className="Sort-Container">
                     <div className="Sort-By">Sort by Most Recent</div>
                     <img className="Sort-Icon" src={DropDown} alt="DropDown" />
@@ -261,57 +267,57 @@ const ReviewSection = () => {
             </div>
           </div>
         </div>
-        {/*Reviews component here*/ }
+        {/*Reviews component here*/}
 
-        
+
         <div className="main-container">
-        <div className="user-info">
+          <div className="user-info">
             <div className="user-details">
-                <div className="user-name">Nigel</div>
-                <div className="user-location">Michigan</div>
-                <div className="user-review">Review <span className="bold-letter">1</span></div>
-                <div className="user-votes">Votes <span className="bold-letter">0</span></div>
+              <div className="user-name">Nigel</div>
+              <div className="user-location">Michigan</div>
+              <div className="user-review">Review <span className="bold-letter">1</span></div>
+              <div className="user-votes">Votes <span className="bold-letter">0</span></div>
             </div>
-        </div>
-        <div className="review-container">
+          </div>
+          <div className="review-container">
             <div className="review-header">
-                <div className="stars">
-                    <img src={Starbold} alt="" className="star" />
-                    <img src={Starbold} alt="" className="star" />
-                    <img src={Starbold} alt="" className="star" />
-                    <img src={Starbold} alt="" className="star" />
-                    <img src={Starbold} alt="" className="star" />
-                </div>
-                <div className="review-rating"></div>
-                <div className="review-title">It's a nice backpack if your dog is 12 lbs or less</div>
-                <div className="review-date">a month ago</div>
+              <div className="stars">
+                <img src={Starbold} alt="" className="star" />
+                <img src={Starbold} alt="" className="star" />
+                <img src={Starbold} alt="" className="star" />
+                <img src={Starbold} alt="" className="star" />
+                <img src={Starbold} alt="" className="star" />
+              </div>
+              <div className="review-rating"></div>
+              <div className="review-title">It's a nice backpack if your dog is 12 lbs or less</div>
+              <div className="review-date">a month ago</div>
             </div>
-            <div className="review-content">My sister has two Havanese dogs I take on bike rides. The girl weighs 10 lbs and loves riding in this backpack...[more text here]</div>
+            <div className="review-content">My sister has two Havanese dogs I take on bike rides. The girl weighs 10 lbs and loves riding in this backpack, also these developers did an amazing job building this website...</div>
             <div className="review-footer">
-                <div className="review-age"><span className="bold-letter">Age</span> 34-45</div>
-                <div className="review-recommendation">
-                    <img src={Checkmark} alt="" className="thumb" />
-                    Yes, I recommend this product.
-                </div>
+              <div className="review-age"><span className="bold-letter">Age</span> 34-45</div>
+              <div className="review-recommendation">
+                <img src={Checkmark} alt="" className="thumb" />
+                Yes, I recommend this product.
+              </div>
             </div>
-            <div className="review-images" style={{display: 'flex', justifyContent: 'space-between'}}>
-                <img src="https://via.placeholder.com/175x175" alt="Review Image 1"/>
-                <img src="https://via.placeholder.com/175x175" alt="Review Image 2" />
+            <div className="review-images" style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <img src="https://photos-us.bazaarvoice.com/photo/2/cGhvdG86cmVpLWluYw/99333e4d-8e98-5dd5-bf86-65e672102699" style={{ width: '175px', height: '175px' }} alt="Review Image 1" />
+              <img src="https://photos-us.bazaarvoice.com/photo/2/cGhvdG86cmVpLWluYw/c79e0778-2974-5ecf-adbd-08b3ab52c2ea" style={{ width: '175px', height: '175px' }} alt="Review Image 2" />
             </div>
             <div className="end-of-page">
-                <div className="helpful">
-                    Helpful?
-                    <img src={Thumbsupoutline} alt="" className="thumb" />
-                    (0)
-                    <img src={Thumbsdownoutline} alt="" className="thumb" />
-                    (0)
-                </div>
-                <div className="innapropriate">
-                    Report as inappropriate
-                </div>
+              <div className="helpful">
+                Helpful?
+                <img src={Thumbsupoutline} alt="" className="thumb" />
+                (0)
+                <img src={Thumbsdownoutline} alt="" className="thumb" />
+                (0)
+              </div>
+              <div className="innapropriate">
+                Report as inappropriate
+              </div>
             </div>
+          </div>
         </div>
-    </div>
 
 
 

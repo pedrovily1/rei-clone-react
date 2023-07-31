@@ -50,7 +50,9 @@
   align-items: center;
   justify-content: space-around;
   font-size: small;
-      position: relative;
-    bottom: 4px;
-    right: 4px;
+  position: relative;
+  bottom: 4px;
+  right: 4px;
+  text-decoration: none;
+  color: #0c0b08bf;
 }

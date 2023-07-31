@@ -105,7 +105,7 @@ const BelowTheFold = () => {
                   <div className="username2">REIservice</div>
                   <div className="timestamp">8 months ago</div>
                   <div className="interaction-section">
-                    <div className="end-of-page">
+                    <div className="end-of-page-questions">
                       <div className="helpful">
                         Helpful?
                         <img
@@ -155,7 +155,7 @@ const BelowTheFold = () => {
                   <div className="username2">REIservice</div>
                   <div className="timestamp">11 months ago</div>
                   <div className="interaction-section">
-                    <div className="end-of-page">
+                    <div className="end-of-page-questions">
                       <div className="helpful">
                         Helpful?
                         <img
@@ -204,7 +204,7 @@ const BelowTheFold = () => {
                   <div className="username2">REIservice</div>
                   <div className="timestamp">11 months ago</div>
                   <div className="interaction-section">
-                    <div className="end-of-page">
+                    <div className="end-of-page-questions">
                       <div className="helpful">
                         Helpful?
                         <img
