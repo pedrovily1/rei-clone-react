@@ -55,6 +55,23 @@ app.get("/product/:id", async (REQ, RES) => {
         RES.status(500).send("Internal server error"); return;
     }
 });
+//get one review route 
+
+app.get("/review/:id", async (REQ, RES) => {
+    const { id } = REQ.params;
+    try {
+        const results = await pool.query("SELECT * FROM review WHERE id = $1", [id]);
+        if (results.rowCount === 0) {
+            RES.status(404).send("No resource found"); return;
+        } else {
+            RES.status(200).json(results.rows[0].comment); return;
+        }
+    }
+    catch (error) {
+        console.error("Server caught the following error: ", error.message);
+        RES.status(500).send("Internal server error"); return;
+    }
+});
 
 // post one route
 app.get("/product", async (REQ, RES) => {
