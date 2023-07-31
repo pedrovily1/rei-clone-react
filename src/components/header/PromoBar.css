@@ -18,6 +18,8 @@
 .promoSpan {
   color: white;
   font-size: 15px;
+  position: relative;
+  bottom: .5rem;
 }
 
 .AnnoyingTag {
