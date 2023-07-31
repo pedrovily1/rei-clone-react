@@ -1,6 +1,7 @@
 .product-details {
   display: flex;
   padding-bottom: 1.1rem;
+
 }
 
 .product-rating {
@@ -10,15 +11,11 @@
   height: 24px;
 }
 
-.product-rating span {
-  position: relative;
-  top: 2px;
-  color: #504e4e;
-}
 
-.product-rating span:hover {
+
+.product-details span:hover {
   color: #406eb5;
-  text-decoration: underline;
+  text-decoration: none
 }
 
 .product-details span {
@@ -27,10 +24,14 @@
   font-size: 14px;
 }
 
-#ratingSpan {
-  bottom: 0.5rem;
-  left: 8rem;
+
+#ratingSpan a {
+  text-decoration: none;
+  color: #0c0b08bf
 }
+
+
+
 
 .star {
    align-items: center;
