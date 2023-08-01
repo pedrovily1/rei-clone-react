@@ -1,5 +1,5 @@
-import './LowerBar.css';
-
+import "./LowerBar.css";
+import { Link } from "react-router-dom";
 const LowerBar = () => {
   return (
     <>
@@ -15,12 +15,16 @@ const LowerBar = () => {
         <div className="lowerBarBtns">Men</div>
         <div className="lowerBarBtns">Women</div>
         <div className="lowerBarBtns">Kids</div>
-        <div className="lowerBarBtns" id="deals">Deals</div>
+        <div className="lowerBarBtns" id="deals">
+          Deals
+        </div>
         <div className="lowerBarBtns">Brands</div>
-        <div className="lowerBarBtns">More</div>
+        <div className="lowerBarBtns">
+          <Link to="/developers">More</Link>
+        </div>
       </div>
     </>
   );
-}
+};
 
 export default LowerBar;
