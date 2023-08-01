@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./ReviewSection.css";
 import Star from "/src/assets/Star.svg";
 import Starempty from "/src/assets/Starempty.svg";
@@ -11,7 +12,26 @@ import Checkmark from '/src/assets/checkmark.svg';
 import Thumbsupoutline from '/src/assets/Thumbsupoutline.svg';
 import Thumbsdownoutline from '/src/assets/Thumbsdownoutline.svg';
 
-const ReviewSection = ({ comment }) => {
+const ReviewSection = ( ) => {
+
+  const [comment, setComment] = useState("");
+
+  console.log("Component rendered"); // outside useEffect
+
+  useEffect(() => {
+    console.log("useEffect called"); // inside useEffect
+
+    fetch("/review/1")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Full API response:", data);
+        setTimeout(() => {
+          setComment(data);
+          console.log(data);
+        }, 4000);
+      });
+  }, []);
+
   return (
     <>
       <li id="product-reviews-accordion">

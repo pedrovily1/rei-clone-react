@@ -10,23 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AboutPage from "./components/AboutPage";
 
 function App() {
-  const [comment, setComment] = useState("");
-
-  console.log("Component rendered"); // outside useEffect
-
-  useEffect(() => {
-    console.log("useEffect called"); // inside useEffect
-
-    fetch("/review/1")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Full API response:", data);
-        setTimeout(() => {
-          setComment(data);
-          console.log(data);
-        }, 4000);
-      });
-  }, []);
+  
 
   return (
     <div>
@@ -42,7 +26,7 @@ function App() {
                     <>
                       <CartModal />
                       <Header />
-                      <BodyContainer comment={comment} />
+                      <BodyContainer   />
                       <Footer />
                     </>
                   }
