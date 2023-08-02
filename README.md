@@ -31,6 +31,12 @@ npm run dev
 
 Open your browser and visit the local host on your port
 
+
+https://github.com/pedrovily1/rei-clone-react/assets/127983785/6107dd94-c784-4a51-80b8-3b7c5c129d4e
+
+
+
+
 Usage
 
  this product display different components that render the page which is identical to the REI website.
