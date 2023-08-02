@@ -17,7 +17,7 @@ You will need `node` and `npm` installed globally on your machine.
 ### Installation
 
 1. Clone the repo: 
-    git clone https://github.com/your_username_/Project-Name.git
+    git clone https://github.com/pedrovily1/rei-clone-react
 Navigate to the project folder and install the dependencies:
  
  cd Project-Name
