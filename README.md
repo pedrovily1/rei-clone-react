@@ -1,6 +1,9 @@
  
 # React Rei-clone Project
 
+https://github.com/pedrovily1/rei-clone-react/assets/127983785/6107dd94-c784-4a51-80b8-3b7c5c129d4e
+
+
 This is a front end project showcasing a clone of the REI webpage..
 
 ## Getting Started
@@ -32,8 +35,7 @@ npm run dev
 Open your browser and visit the local host on your port
 
 
-https://github.com/pedrovily1/rei-clone-react/assets/127983785/6107dd94-c784-4a51-80b8-3b7c5c129d4e
-
+ 
 
 
 
